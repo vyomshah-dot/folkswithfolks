@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Folk with Folks — Logo suite</title>
+<style>
+  @font-face{font-family:'Bricolage Grotesque';src:url('../fonts/BricolageGrotesque-VariableFont_opsz_wdth_wght.ttf') format('truetype');font-weight:200 800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Fraunces';src:url('../fonts/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+  @font-face{font-family:'Fraunces';src:url('../fonts/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
+  @font-face{font-family:'Hanken Grotesk';src:url('../fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+</style>
+<style>
+  :root{
+    --ink:#2A241F;--paper:#F4ECDD;--paper-deep:#EADDC6;--card:#FBF6EB;
+    --terra:#C24E3A;--marigold:#E8A33D;--fg2:rgba(42,36,31,.7);--fg3:rgba(42,36,31,.55);
+    --disp:'Bricolage Grotesque',sans-serif;--serif:'Fraunces',Georgia,serif;--body:'Hanken Grotesk',system-ui,sans-serif;
+    --border:2px solid var(--ink);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper);
+    background-image:radial-gradient(rgba(42,36,31,.05) 1px,transparent 1px);background-size:22px 22px;
+    color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;
+    padding:56px clamp(20px,5vw,72px) 72px;
+  }
+  .head{max-width:760px;margin:0 auto 44px}
+  .eyebrow{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+  h1{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;font-size:clamp(34px,5vw,52px);line-height:1.02;margin:14px 0 0}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--terra)}
+  .head p{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--fg2);max-width:60ch;margin:16px 0 0}
+
+  .grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .row-full{grid-column:1 / -1}
+
+  .card{background:var(--card);border:var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:5px 5px 0 var(--ink)}
+  .stage{position:relative;min-height:230px;display:flex;align-items:center;justify-content:center;padding:34px;border-bottom:var(--border)}
+  .stage img{max-width:100%;max-height:200px;width:auto;height:auto;display:block}
+  .stage--ink{background:#2A241F}
+  .stage--terra{background:var(--terra)}
+  .stage--paper{background:var(--paper-deep)}
+  .stage--white{background:#FCF8F0}
+
+  .meta{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .badge{align-self:flex-start;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink);background:var(--marigold);border:2px solid var(--ink);border-radius:999px;padding:3px 11px}
+  .name{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.01em;line-height:1.1}
+  .use{font-size:14.5px;line-height:1.55;color:var(--fg2);margin:0}
+  .use b{color:var(--ink);font-weight:700}
+  .file{font-family:var(--body);font-size:12px;color:var(--fg3);letter-spacing:.01em;margin-top:2px}
+
+  .note{max-width:1120px;margin:34px auto 0;background:var(--card);border:var(--border);border-radius:16px;padding:24px 28px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .note h3{font-family:var(--disp);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px}
+  .note p{font-size:14px;line-height:1.55;color:var(--fg2);margin:0}
+  @media(max-width:780px){.grid{grid-template-columns:1fr}.note{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="head">
+    <span class="eyebrow">Brand · logo suite</span>
+    <h1>One studio, <em>many rooms</em>.</h1>
+    <p>The full Folk with Folks mark family. Each version is built for a different job — pick by the space you’re filling and the colour behind it. The primary lockup is the default; reach for the others only when it won’t fit or won’t read.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1 — Primary -->
+    <div class="card row-full">
+      <div class="stage stage--white" style="min-height:300px">
+        <img src="../assets/logos/logo-lockup-primary.png" alt="Torana symbol beside the stacked folk with folks wordmark" />
+      </div>
+      <div class="meta">
+        <span class="badge">Primary lockup</span>
+        <div class="name">Symbol + wordmark</div>
+        <p class="use"><b>The default — use this first.</b> Symbol and name together, full brand presence. Best on packaging, the About page, business cards, deck title slides, and anywhere you have generous horizontal room on a light ground.</p>
+        <span class="file">logo-lockup-primary.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 2 — Vertical -->
+    <div class="card">
+      <div class="stage stage--white">
+        <img src="../assets/logos/logo-lockup-vertical.png" alt="Symbol stacked above the wordmark" />
+      </div>
+      <div class="meta">
+        <span class="badge">Vertical lockup</span>
+        <div class="name">Stacked, symbol on top</div>
+        <p class="use">For <b>centred, near-square moments</b>: kit box lids, loading splash, sticker sheets, square social posts, and avatars where width is tight.</p>
+        <span class="file">logo-lockup-vertical.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 5 — Seal -->
+    <div class="card">
+      <div class="stage stage--white">
+        <img src="../assets/logos/logo-seal.png" alt="Scalloped circular seal reading folk with folks, folk craft studio" />
+      </div>
+      <div class="meta">
+        <span class="badge">Seal / badge</span>
+        <div class="name">Stamp of craft</div>
+        <p class="use">A <b>mark of authenticity</b>. Use small: wax-seal stickers, order-confirmation stamps, hang tags, “hand-packed in Mumbai” certificates, the back of a card.</p>
+        <span class="file">logo-seal.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 8 — Horizontal wordmark -->
+    <div class="card row-full">
+      <div class="stage stage--white" style="min-height:200px">
+        <img src="../assets/logos/logo-wordmark-horizontal.png" alt="folk with folks set on one line" style="max-height:120px" />
+      </div>
+      <div class="meta">
+        <span class="badge">Horizontal wordmark</span>
+        <div class="name">The workhorse — one line</div>
+        <p class="use"><b>Headers, nav bars, email signatures, footers.</b> Whenever you’re in a slim horizontal strip and the symbol would shrink too far to read, use the name alone.</p>
+        <span class="file">logo-wordmark-horizontal.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 7 — Stacked wordmark -->
+    <div class="card">
+      <div class="stage stage--white">
+        <img src="../assets/logos/logo-wordmark-stacked.png" alt="folk with folks stacked over three lines" />
+      </div>
+      <div class="meta">
+        <span class="badge">Stacked wordmark</span>
+        <div class="name">Name only, three lines</div>
+        <p class="use">Presence <b>without the symbol</b> in a square-ish space — tote and tee prints, merch, large social crops, poster corners.</p>
+        <span class="file">logo-wordmark-stacked.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 6 — Compact wordmark -->
+    <div class="card">
+      <div class="stage stage--white">
+        <img src="../assets/logos/logo-wordmark-compact.png" alt="folk with folks on one line with generous margin" style="max-height:90px" />
+      </div>
+      <div class="meta">
+        <span class="badge">Compact wordmark</span>
+        <div class="name">One line, built-in margin</div>
+        <p class="use">Same one-liner with <b>generous clear-space baked in</b> — drop into a roughly square slot (app tile, profile header) without measuring padding.</p>
+        <span class="file">logo-wordmark-compact.png · transparent</span>
+      </div>
+    </div>
+
+    <!-- 3 — On ink -->
+    <div class="card">
+      <div class="stage stage--ink">
+        <img src="../assets/logos/logo-wordmark-on-ink.png" alt="Cream wordmark on dark ink background" />
+      </div>
+      <div class="meta">
+        <span class="badge">Reversed · dark</span>
+        <div class="name">For ink & photo grounds</div>
+        <p class="use">Cream type with a <b>marigold “with.”</b> Use on the dark/indigo sections, over dark photography, and on video end cards.</p>
+        <span class="file">logo-wordmark-on-ink.png · baked background</span>
+      </div>
+    </div>
+
+    <!-- 4 — On terracotta -->
+    <div class="card">
+      <div class="stage stage--terra">
+        <img src="../assets/logos/logo-wordmark-on-terracotta.png" alt="Cream wordmark on terracotta background" />
+      </div>
+      <div class="meta">
+        <span class="badge">Reversed · colour</span>
+        <div class="name">For terracotta blocks</div>
+        <p class="use">Cream type with an <b>ink “with.”</b> Use on terracotta or warm colour blocks — promo banners, sale tiles, packaging bands.</p>
+        <span class="file">logo-wordmark-on-terracotta.png · baked background</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <div>
+      <h3>Clear space</h3>
+      <p>Keep a margin of at least the symbol’s circle (or the cap-height of “folk”) clear on every side. Don’t crowd it with other elements.</p>
+    </div>
+    <div>
+      <h3>Minimum size</h3>
+      <p>Full lockups: don’t go below ~120px wide on screen. Below that, switch to the wordmark or seal so the torana detail doesn’t mud up.</p>
+    </div>
+    <div>
+      <h3>Don’t</h3>
+      <p>Don’t recolour the type, stretch, add shadows, or place the transparent marks on a busy mid-tone. Light art → light grounds, reversed art → dark/colour.</p>
+    </div>
+  </div>
+</body>
+</html>

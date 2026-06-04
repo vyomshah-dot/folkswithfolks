@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chanakya Kit of Wit — The Bible · Folk with Folks / Katha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4ECDA;
+    --paper-2:#EFE4CC;
+    --ink:#211A12;
+    --ink-soft:#4A3F30;
+    --terracotta:#C0512F;
+    --terracotta-deep:#9A3C20;
+    --marigold:#E4A02B;
+    --indigo:#26365E;
+    --indigo-deep:#182542;
+    --neem:#5A7340;
+    --line:rgba(33,26,18,.16);
+    --shadow:0 18px 40px -24px rgba(24,37,66,.55);
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Hanken Grotesk",sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(228,160,43,.10), transparent 40%),
+      radial-gradient(circle at 90% 4%, rgba(38,54,94,.08), transparent 45%);
+  }
+  /* grain */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .layout{display:grid;grid-template-columns:286px 1fr;align-items:start;}
+
+  /* ---- SIDEBAR ---- */
+  nav.toc{
+    position:sticky;top:0;height:100vh;overflow-y:auto;
+    padding:38px 26px 60px;
+    border-right:1px solid var(--line);
+    background:linear-gradient(180deg,var(--paper-2),var(--paper));
+  }
+  .toc-brand{font-family:"Bricolage Grotesque";font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta-deep);}
+  .toc-sub{font-family:"Fraunces";font-style:italic;font-size:15px;color:var(--ink-soft);margin:2px 0 24px;}
+  .toc a{
+    display:block;text-decoration:none;color:var(--ink-soft);
+    font-size:13.5px;padding:6px 10px;border-radius:7px;line-height:1.35;
+    border-left:2px solid transparent;transition:.18s;
+  }
+  .toc a .n{font-family:"Bricolage Grotesque";font-weight:600;color:var(--terracotta);margin-right:8px;font-size:12px;}
+  .toc a:hover{background:rgba(192,81,47,.08);color:var(--ink);}
+  .toc a.active{background:rgba(38,54,94,.10);color:var(--indigo-deep);border-left:2px solid var(--terracotta);font-weight:500;}
+
+  /* ---- MAIN ---- */
+  main{padding:0 0 120px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+
+  /* COVER */
+  header.cover{
+    background:linear-gradient(160deg,var(--indigo-deep),var(--indigo) 70%);
+    color:var(--paper);padding:70px 32px 64px;position:relative;overflow:hidden;
+  }
+  header.cover .wrap{position:relative;z-index:2;}
+  .torana{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;opacity:.22;z-index:1;}
+  .kicker{font-family:"Bricolage Grotesque";font-weight:600;letter-spacing:.34em;text-transform:uppercase;font-size:12px;color:var(--marigold);}
+  header.cover h1{
+    font-family:"Bricolage Grotesque";font-weight:800;
+    font-size:clamp(38px,7vw,68px);line-height:.98;margin:14px 0 8px;letter-spacing:-.01em;
+  }
+  header.cover h1 em{font-family:"Fraunces";font-style:italic;font-weight:400;color:var(--marigold);}
+  .cover-lede{font-family:"Fraunces";font-size:20px;font-style:italic;max-width:540px;color:#E9DEC6;line-height:1.5;}
+  .cover-meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{font-size:12px;letter-spacing:.06em;border:1px solid rgba(244,236,218,.34);padding:6px 13px;border-radius:100px;color:#EDE3CC;}
+
+  /* SECTIONS */
+  section{padding:56px 0 12px;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+  .secnum{font-family:"Bricolage Grotesque";font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--terracotta);text-transform:uppercase;}
+  h2{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(27px,4vw,38px);line-height:1.04;margin:8px 0 6px;letter-spacing:-.01em;color:var(--indigo-deep);}
+  h3{font-family:"Bricolage Grotesque";font-weight:600;font-size:21px;margin:34px 0 6px;color:var(--terracotta-deep);}
+  h4{font-family:"Hanken Grotesk";font-weight:600;font-size:16px;letter-spacing:.02em;margin:22px 0 4px;color:var(--indigo);}
+  p{margin:12px 0;}
+  .lede{font-family:"Fraunces";font-size:19px;font-style:italic;color:var(--ink-soft);line-height:1.55;}
+  strong{font-weight:600;color:var(--indigo-deep);}
+  a.inline{color:var(--terracotta-deep);}
+
+  ul,ol{margin:12px 0;padding-left:22px;}
+  li{margin:7px 0;}
+  ul.clean{list-style:none;padding-left:0;}
+  ul.clean li{position:relative;padding-left:26px;}
+  ul.clean li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;background:var(--marigold);border-radius:2px;transform:rotate(45deg);}
+
+  blockquote{
+    margin:26px 0;padding:20px 26px;border-left:4px solid var(--terracotta);
+    background:rgba(228,160,43,.10);border-radius:0 12px 12px 0;
+    font-family:"Fraunces";font-style:italic;font-size:18px;color:var(--ink-soft);
+  }
+
+  .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0;box-shadow:var(--shadow);}
+  .card h3{margin-top:0;}
+
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-family:"Bricolage Grotesque";font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);background:rgba(38,54,94,.06);}
+  td:first-child{font-weight:600;color:var(--indigo-deep);}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr;}}
+
+  .step{display:flex;gap:18px;margin:20px 0;align-items:flex-start;}
+  .step .num{flex:none;width:42px;height:42px;border-radius:50%;background:var(--terracotta);color:var(--paper);font-family:"Bricolage Grotesque";font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--shadow);}
+  .step .body h4{margin-top:2px;}
+
+  .swatches{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;}
+  .sw{flex:1 1 120px;border-radius:12px;overflow:hidden;border:1px solid var(--line);}
+  .sw .chipc{height:64px;}
+  .sw .lbl{padding:8px 10px;font-size:12px;background:var(--paper-2);}
+  .sw .lbl b{display:block;font-family:"Bricolage Grotesque";color:var(--ink);}
+  .sw .lbl span{color:var(--ink-soft);font-size:11px;}
+
+  .pill{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:100px;font-family:"Bricolage Grotesque";font-weight:600;}
+  .done{background:var(--neem);color:#F4ECDA;}
+  .wip{background:var(--marigold);color:#3a2a06;}
+  .next{background:rgba(38,54,94,.12);color:var(--indigo);}
+
+  footer{padding:50px 32px;text-align:center;color:var(--ink-soft);font-family:"Fraunces";font-style:italic;border-top:1px solid var(--line);}
+
+  @media(max-width:920px){
+    .layout{grid-template-columns:1fr;}
+    nav.toc{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ============ SIDEBAR ============ -->
+  <nav class="toc">
+    <div class="toc-brand">Folk with Folks · Katha</div>
+    <div class="toc-sub">The Chanakya Kit of Wit — Bible</div>
+    <a href="#how"><span class="n">00</span>How to use this bible</a>
+    <a href="#foundation"><span class="n">01</span>Foundation &amp; the big idea</a>
+    <a href="#character"><span class="n">02</span>The character: Chanakya</a>
+    <a href="#format"><span class="n">03</span>Format &amp; the conversion</a>
+    <a href="#contents"><span class="n">04</span>What's in the kit</a>
+    <a href="#materials"><span class="n">05</span>Materials specification</a>
+    <a href="#procedure"><span class="n">06</span>Making the puppet</a>
+    <a href="#design"><span class="n">07</span>Design &amp; look</a>
+    <a href="#sell"><span class="n">08</span>How to sell it</a>
+    <a href="#market"><span class="n">09</span>How to market it</a>
+    <a href="#progress"><span class="n">10</span>Progress log (built in Claude)</a>
+    <a href="#open"><span class="n">11</span>Open decisions</a>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+
+    <!-- COVER -->
+    <header class="cover">
+      <div class="torana">
+        <svg width="420" height="260" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 260V90c0-30 25-55 55-55h230c30 0 55 25 55 55v170" stroke="#E4A02B" stroke-width="6"/>
+          <path d="M70 260V110c0-22 18-40 40-40h200c22 0 40 18 40 40v150" stroke="#E4A02B" stroke-width="3" opacity=".7"/>
+          <path d="M95 70c30-34 200-34 230 0" stroke="#E4A02B" stroke-width="4"/>
+          <circle cx="210" cy="44" r="9" fill="#E4A02B"/>
+          <path d="M30 260h360M50 90l-14-22h28zM370 90l-14-22h28z" stroke="#E4A02B" stroke-width="4"/>
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="kicker">The Source Document · v1</div>
+        <h1>The Chanakya<br><em>Kit of Wit</em></h1>
+        <p class="cover-lede">A pencil-box that opens into a puppet stage. A folk strategist you build with your own hands. The complete, living reference for the flagship Katha kit.</p>
+        <div class="cover-meta">
+          <span class="chip">Studio: Folk with Folks</span>
+          <span class="chip">Line: Katha</span>
+          <span class="chip">Ages 9–14</span>
+          <span class="chip">220 × 90 × 35 mm clamshell</span>
+          <span class="chip">Wire-armature puppet</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+
+      <!-- 00 -->
+      <section id="how">
+        <div class="secnum">Section 00</div>
+        <h2>How to use this bible</h2>
+        <p class="lede">This is the single source of truth for the Chanakya Kit of Wit. Everything else — the blueprint PDF, the brand book, the website, the Reels script — answers to what is written here.</p>
+        <p>Treat it as a <strong>living document</strong>, not a finished one. When a decision changes (a colorway is locked, a material is swapped, a price is set), update the relevant section and add a line to the <a class="inline" href="#progress">Progress Log</a>. The goal is that on any given night you can open this one file and rebuild the entire context of the product in five minutes — what it is, who it's for, how it's made, how it's sold, and what's already done.</p>
+        <p>Three layers are referenced throughout, matching your working stack: <strong>concept &amp; copy</strong> (this bible), <strong>layout / social / web</strong> (Claude Design), and <strong>print-ready dielines &amp; logo</strong> (Illustrator / CorelDRAW, driven by the precision-PDF-blueprint output).</p>
+      </section>
+
+      <!-- 01 -->
+      <section id="foundation">
+        <div class="secnum">Section 01</div>
+        <h2>Foundation &amp; the big idea</h2>
+        <p class="lede">Folk with Folks is the studio. Katha is the product line — do-it-yourself puppet kits that turn Indian folk characters into something a child builds, performs, and keeps.</p>
+
+        <h3>The product in one line</h3>
+        <blockquote>A clamshell "pencil-box" that opens into a tiny puppet stage, holding everything a 9–14-year-old needs to build a wire-armature Chanakya puppet and stage their own scene of cleverness.</blockquote>
+
+        <h3>The theme &amp; base</h3>
+        <p>The base is <strong>Indian folk storytelling</strong> — the same well that feeds Panchatantra, Tenali Rama, Akbar–Birbal, and Chanakya. Katha doesn't retell these as a screen experience; it puts the <em>making</em> and the <em>performing</em> back into the child's hands. The recurring promise across the whole line is: <strong>you build the character, then you make it speak.</strong></p>
+        <p>For this first kit, the chosen character is <strong>Chanakya</strong> and the chosen theme is <strong>wit and strategy</strong> — hence "Kit of Wit." Where other folk characters lean on humour or mischief, Chanakya gives us the angle of the clever long-game: planning, patience, and outsmarting a bigger opponent. That theme runs from the name, into the included wisdom cards, into the scenes the manual suggests.</p>
+
+        <h3>Who it's for</h3>
+        <div class="grid2">
+          <div class="card">
+            <h3>The child (9–14)</h3>
+            <p>Old enough to handle wire and clay with focus, young enough to still love making a character talk. Gets a craft project, a toy, and a story they can perform.</p>
+          </div>
+          <div class="card">
+            <h3>The gift-buyer (parent / relative)</h3>
+            <p>Wants screen-free, made-in-India, culturally rooted, "actually does something" gifting. The conversion-into-a-stage is the hook that makes them pick it up.</p>
+          </div>
+        </div>
+
+        <h3>The spine of the brand</h3>
+        <p>The primary brand symbol is <strong>The Torana Stage</strong> — the temple-gateway arch that is simultaneously the logo motif <em>and</em> the literal shape the kit opens into. The arch is the throughline: it appears on the box, becomes the proscenium of the stage, anchors the website, and frames the YouTube channel. Lock this single idea and everything downstream stays coherent.</p>
+      </section>
+
+      <!-- 02 -->
+      <section id="character">
+        <div class="secnum">Section 02</div>
+        <h2>The character: Chanakya</h2>
+        <p class="lede">Condensed from the full Chanakya character bible. Enough to build him, dress him, and write his voice — without re-opening the long document.</p>
+
+        <h3>Who he is, and why him</h3>
+        <p>Chanakya (also Kautilya) is the Mauryan-era teacher and strategist — the mind behind the rise of Chandragupta Maurya and the author of the <em>Arthashastra</em>. For a kit about wit, he's the ideal anchor: the small, plainly-dressed man who out-thinks kings. That contrast — humble appearance, formidable intellect — is exactly what makes a good puppet and a good story for this age group.</p>
+
+        <h3>Physical appearance</h3>
+        <ul class="clean">
+          <li>Lean, wiry build — not a hero's physique. The cleverness is the power.</li>
+          <li>Shaven head with a <strong>shikha</strong> (the single knotted tuft) — instantly readable silhouette, easy to sculpt.</li>
+          <li>Sharp, watchful eyes; a slight, knowing set to the mouth.</li>
+          <li>Often barefoot or in simple sandals — a teacher, not a courtier.</li>
+        </ul>
+
+        <h3>Mauryan-era clothing</h3>
+        <table>
+          <tr><th>Garment</th><th>Note for the puppet</th></tr>
+          <tr><td>Dhoti / antariya</td><td>Lower unstitched cloth, wrapped and tucked. In undyed cotton or pale natural tone.</td></tr>
+          <tr><td>Uttariya</td><td>Upper shawl draped over one shoulder — the main place to introduce the <strong>indigo</strong> accent.</td></tr>
+          <tr><td>Yajnopavita</td><td>The sacred thread across the torso — a fine cream cord, a nice detail step for older kids.</td></tr>
+          <tr><td>Minimal jewellery</td><td>He's austere by design. Keep ornamentation almost nil — this also keeps the kit cheap and simple.</td></tr>
+        </table>
+
+        <h3>His voice (for the manual &amp; wit cards)</h3>
+        <p>Calm, dry, a little sly. He answers a problem with a question. He prefers the indirect move to the loud one. The "wit cards" in the kit should sound like small, repeatable maxims — practical cleverness a child can actually use, drawn in spirit from the Arthashastra's strategic thinking but written plainly and warmly, never preachy.</p>
+      </section>
+
+      <!-- 03 -->
+      <section id="format">
+        <div class="secnum">Section 03</div>
+        <h2>Format &amp; the conversion</h2>
+        <p class="lede">The whole product idea lives or dies on one moment: the box opening into a stage. This is the section to protect.</p>
+
+        <h3>The object</h3>
+        <ul class="clean">
+          <li><strong>Form:</strong> rigid clamshell, the size and feel of a premium pencil box.</li>
+          <li><strong>Dimensions:</strong> 220 × 90 × 35 mm (closed).</li>
+          <li><strong>Closed state:</strong> reads as a beautiful, giftable object — a folk artefact, not a toy carton.</li>
+        </ul>
+
+        <h3>The conversion — how the box becomes the stage</h3>
+        <div class="step"><div class="num">1</div><div class="body"><h4>Unlatch &amp; open flat</h4><p>The clamshell opens on its long hinge and lays flat, doubling the footprint into a low, wide playing field.</p></div></div>
+        <div class="step"><div class="num">2</div><div class="body"><h4>The lid stands up as the Torana</h4><p>The inside of the lid carries the printed <strong>Torana arch</strong> backdrop. A scored fold and a tab-and-slot lets it lock upright as the proscenium — the literal stage frame and brand symbol, now in 3D.</p></div></div>
+        <div class="step"><div class="num">3</div><div class="body"><h4>The base becomes the floor</h4><p>The base tray, emptied of its die-cut puppet-and-prop compartments, is the stage floor. Interchangeable backdrop cards drop in behind the puppet.</p></div></div>
+        <div class="step"><div class="num">4</div><div class="body"><h4>The puppet takes the stage</h4><p>The finished wire-armature Chanakya stands (or is tie-down anchored) on the floor. The child now performs — and the box that arrived as a gift is now a working theatre.</p></div></div>
+
+        <blockquote>Design rule: the conversion must be doable by a 10-year-old with no glue and no adult, in under a minute, every single time, reversibly. If a fold needs force or tape, redesign it.</blockquote>
+
+        <h3>Does it convert into something? — yes, and that's the pitch</h3>
+        <p>"Pencil-box → puppet stage" is the one sentence that sells the kit cold. Closed, it earns shelf and gift appeal; open, it earns play and repeat use. Keep this transformation on the front of the box, the first frame of every Reel, and the hero of the website.</p>
+      </section>
+
+      <!-- 04 -->
+      <section id="contents">
+        <div class="secnum">Section 04</div>
+        <h2>What's in the kit</h2>
+        <p class="lede">Everything the box holds, grouped by what it does. The die-cut tray gives each item a home — which itself becomes part of the unboxing delight.</p>
+
+        <h3>A. To build the puppet</h3>
+        <ul class="clean">
+          <li>Pre-cut <strong>aluminium armature wire</strong> (body + limbs), gauges chosen for child-safe bending.</li>
+          <li><strong>Air-dry / epoxy clay</strong> sachets for head, hands, and feet — or a pre-cast Chanakya head option for the "easy" path.</li>
+          <li><strong>Cotton wadding / batting</strong> for bulking the torso and limbs.</li>
+          <li>Fine <strong>binding thread</strong> and a blunt needle.</li>
+          <li>Pre-cut <strong>fabric pieces</strong>: dhoti (natural), uttariya (indigo), and a fine cord for the sacred thread.</li>
+        </ul>
+
+        <h3>B. To stage the story</h3>
+        <ul class="clean">
+          <li>The lid's printed <strong>Torana proscenium</strong> (built into the box).</li>
+          <li>2–3 interchangeable <strong>backdrop cards</strong> (e.g. a court, a study, a road).</li>
+          <li>A few flat <strong>prop punch-outs</strong> (scroll, lamp, a second silhouette to argue with).</li>
+        </ul>
+
+        <h3>C. To carry the theme — "Wit"</h3>
+        <ul class="clean">
+          <li>A small deck of <strong>Niti / wit cards</strong> — short Chanakya-flavoured maxims and "what would Chanakya do?" prompts that double as scene starters.</li>
+        </ul>
+
+        <h3>D. To guide the child</h3>
+        <ul class="clean">
+          <li>The <strong>printed manual</strong>: who Chanakya was, the step-by-step build, the conversion, and 2–3 ready-to-perform mini-scenes.</li>
+          <li>A QR link to the <strong>YouTube build-along</strong> and a teaser, tying physical to the channel.</li>
+        </ul>
+      </section>
+
+      <!-- 05 -->
+      <section id="materials">
+        <div class="secnum">Section 05</div>
+        <h2>Materials specification</h2>
+        <p class="lede">Every material, why it's there, and what to watch on cost and safety. This is the table to hand a manufacturer.</p>
+        <table>
+          <tr><th>Material</th><th>Why it's chosen</th><th>Watch-outs</th></tr>
+          <tr><td>Rigid board box (clamshell)</td><td>Premium gift feel; holds the fold/lock conversion; printable inside &amp; out.</td><td>Board weight &amp; scoring must survive repeated open/close.</td></tr>
+          <tr><td>Aluminium armature wire</td><td>Bends &amp; holds pose without tools; the heart of stop-motion puppetry.</td><td>Cap the ends; choose a gauge safe for small hands.</td></tr>
+          <tr><td>Air-dry or epoxy clay</td><td>Lets the child sculpt head/hands; no kiln, no oven.</td><td>Non-toxic grade only; pre-cast head as the simpler alternative.</td></tr>
+          <tr><td>Cotton wadding</td><td>Cheap, safe bulking under the cloth.</td><td>—</td></tr>
+          <tr><td>Cotton fabric (natural + indigo)</td><td>Period-true dhoti/uttariya; carries the brand's indigo accent.</td><td>Pre-cut to reduce frustration; colour-fast indigo.</td></tr>
+          <tr><td>Thread, blunt needle, cord</td><td>Binding, the sacred thread detail.</td><td>Blunt needle for the age group.</td></tr>
+          <tr><td>Printed cards (backdrops, props, wit deck)</td><td>Theme + replay value at near-zero added cost.</td><td>Coated stock so they survive handling.</td></tr>
+          <tr><td>Printed manual</td><td>Instruction + story + brand voice in one.</td><td>Keep it visual; this age skims text.</td></tr>
+        </table>
+        <p><strong>Two build paths inside one kit.</strong> Offer an "easy" route (pre-cast head, more pre-cut parts) and a "maker" route (sculpt your own head, drape your own cloth). Same box, two difficulty levels — this widens the 9–14 range and gives the manual a natural structure.</p>
+      </section>
+
+      <!-- 06 -->
+      <section id="procedure">
+        <div class="secnum">Section 06</div>
+        <h2>Making the puppet — full procedure</h2>
+        <p class="lede">The wire-armature construction sequence, written as the manual would teach it. This is the spine of the build-along video too.</p>
+
+        <div class="step"><div class="num">1</div><div class="body"><h4>Form the armature skeleton</h4><p>Take the pre-cut aluminium wire. Fold the long body wire in half to make the spine and legs; twist a second piece across the top for shoulders and arms. You now have a stick-figure skeleton — twist the joins tight so they hold a pose.</p></div></div>
+        <div class="step"><div class="num">2</div><div class="body"><h4>Set the proportions</h4><p>Bend to Chanakya's lean proportions: a slightly shorter, grounded figure. Make sure he can stand. Loop the feet flat so he balances (or so the stage tie-downs can anchor him).</p></div></div>
+        <div class="step"><div class="num">3</div><div class="body"><h4>Bulk the body</h4><p>Wrap cotton wadding around torso and limbs, binding it down with thread so it doesn't unravel. Keep the arms thin and the torso modest — austere, not heroic.</p></div></div>
+        <div class="step"><div class="num">4</div><div class="body"><h4>Sculpt or fit the head</h4><p><em>Maker path:</em> shape the head from clay — shaven dome, the shikha tuft, sharp brow, knowing mouth — and press it onto the neck wire while soft. <em>Easy path:</em> push the pre-cast head onto the neck wire. Add clay hands and feet the same way.</p></div></div>
+        <div class="step"><div class="num">5</div><div class="body"><h4>Let it cure</h4><p>Set the clay aside to dry/cure per the sachet. (In the video, this is the "meanwhile, let's prep the stage" cutaway.)</p></div></div>
+        <div class="step"><div class="num">6</div><div class="body"><h4>Dress him</h4><p>Wrap the natural dhoti low and tuck it; drape the indigo uttariya over one shoulder; tie the fine cord as the sacred thread across the torso. A dab of glue or a stitch holds the cloth.</p></div></div>
+        <div class="step"><div class="num">7</div><div class="body"><h4>Finish the face</h4><p>Paint or ink the eyes and mouth — the single most expression-defining step. Keep it minimal: Chanakya's look is in the eyes.</p></div></div>
+        <div class="step"><div class="num">8</div><div class="body"><h4>Pose &amp; stage him</h4><p>Because the armature holds pose, set him mid-thought — a raised hand, a turned head. Convert the box to the Torana Stage, drop in a backdrop, and he's ready to perform.</p></div></div>
+
+        <blockquote>Authoring note: write each step so it has a clear "done" check ("he should now stand on his own"). For 9–14, a visible milestone every step is what keeps them building to the end.</blockquote>
+      </section>
+
+      <!-- 07 -->
+      <section id="design">
+        <div class="secnum">Section 07</div>
+        <h2>Design &amp; look</h2>
+        <p class="lede">The Folk with Folks identity system, applied to this kit. Indigo-led colorway is the current direction for Chanakya.</p>
+
+        <h3>Colour palette</h3>
+        <div class="swatches">
+          <div class="sw"><div class="chipc" style="background:#C0512F"></div><div class="lbl"><b>Terracotta</b><span>Primary warmth, earth</span></div></div>
+          <div class="sw"><div class="chipc" style="background:#E4A02B"></div><div class="lbl"><b>Marigold</b><span>Highlight, festivity</span></div></div>
+          <div class="sw"><div class="chipc" style="background:#26365E"></div><div class="lbl"><b>Indigo</b><span>Chanakya lead colour</span></div></div>
+          <div class="sw"><div class="chipc" style="background:#5A7340"></div><div class="lbl"><b>Neem leaf</b><span>Natural, grounding</span></div></div>
+          <div class="sw"><div class="chipc" style="background:#F4ECDA"></div><div class="lbl"><b>Paper tones</b><span>Base, breathing room</span></div></div>
+        </div>
+        <p>For the Chanakya kit specifically, <strong>indigo leads</strong> — on the box, the uttariya cloth, and the Torana backdrop — with terracotta and marigold as warm accents and paper tones as the canvas. Each future character in the line can claim its own lead colour from the same palette, keeping the family recognisable but distinct.</p>
+
+        <h3>Typography</h3>
+        <table>
+          <tr><th>Role</th><th>Typeface</th><th>Use</th></tr>
+          <tr><td>Display</td><td>Bricolage Grotesque</td><td>Box title, headings, the loud voice.</td></tr>
+          <tr><td>Serif accent</td><td>Fraunces</td><td>Story text, the wit-card maxims, the warm italic voice.</td></tr>
+          <tr><td>Body</td><td>Hanken Grotesk</td><td>Manual instructions, captions, the clear voice.</td></tr>
+        </table>
+
+        <h3>The Torana Stage symbol</h3>
+        <p>The arch is the logo, the stage, and the structural device. Use it as: the proscenium fold inside the lid, a framing motif on backdrops and the manual, and the anchor of the website hero and YouTube banner. One symbol, everywhere — that repetition is what makes a young brand feel established.</p>
+
+        <h3>Production thinking</h3>
+        <p>Two design layers, as established in your stack: <strong>Claude Design</strong> handles layout, social, and web; <strong>Illustrator / CorelDRAW</strong> handle the logo and the print-ready dieline. The production-grade PDF blueprint (A3 landscape, dielines, orthographic views, compartment plan, exploded isometric) is the bridge to the printer — keep it the single approved cut file.</p>
+      </section>
+
+      <!-- 08 -->
+      <section id="sell">
+        <div class="secnum">Section 08</div>
+        <h2>How to sell it</h2>
+        <p class="lede">Two products from one design: the physical kit, and the digital "home-print" version. Sell both, on different channels, at different price logics.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Physical kit</h3>
+            <ul>
+              <li><strong>Own site (folkwithfolks.in):</strong> best margin, full brand control, the home base.</li>
+              <li><strong>Etsy:</strong> reaches gifting + handmade + craft-kit buyers, including export.</li>
+              <li><strong>Indian marketplaces:</strong> reach + trust for domestic buyers; mind the fees.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Digital / print-at-home</h3>
+            <ul>
+              <li><strong>Gumroad:</strong> instant delivery of the printable kit + manual; zero inventory.</li>
+              <li><strong>Canva-based products:</strong> templated printables and activity sheets as low-cost entry products and lead magnets.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Pricing logic (to be locked)</h3>
+        <ul class="clean">
+          <li>Physical kit priced as a <strong>premium gift</strong>, not a commodity toy — the conversion-into-stage and the handmade craft justify it.</li>
+          <li>Digital print-at-home as a <strong>low-friction entry</strong> product that can later upsell to the physical box.</li>
+          <li>Build the price up from real costs: box, materials, print, packing, channel fee, and your time — then set the gift-worthy number above that floor.</li>
+        </ul>
+
+        <h3>Compliance to keep in view</h3>
+        <p>For selling in and out of India, keep <strong>Goods and Services Tax (GST)</strong> registration and, for exports, the <strong>Letter of Undertaking (LUT)</strong> in mind — these came up in the digital-product research and affect both marketplace setup and pricing. (This is a planning note, not financial or legal advice — confirm specifics with a qualified professional.)</p>
+      </section>
+
+      <!-- 09 -->
+      <section id="market">
+        <div class="secnum">Section 09</div>
+        <h2>How to market it</h2>
+        <p class="lede">Lead with the transformation and the craft. The product is inherently visual and inherently shareable — let the format do the selling.</p>
+
+        <h3>Story-first content</h3>
+        <ul class="clean">
+          <li><strong>Instagram Reels (@folkwithfolks):</strong> the 15-second teaser using the real Chanakya clay puppet as image-to-video reference, retimed stop-motion-on-twos. First frame = the box opening into the stage.</li>
+          <li><strong>YouTube channel:</strong> long-form build-alongs ("make Chanakya with me"), the channel branding and banner already set up. The kit's QR points here.</li>
+          <li><strong>The conversion clip:</strong> one reusable hero shot — box → stage → puppet performing — cut for Reels, YouTube intro, and the website hero.</li>
+        </ul>
+
+        <h3>On-ground &amp; experiential</h3>
+        <ul class="clean">
+          <li><strong>Café workshops:</strong> run the build as a paid weekend session — proof, content, and sales in one room.</li>
+          <li><strong>Venue outreach:</strong> the BookMyShow-style one-pager to pitch workshop slots at cafés and event spaces.</li>
+        </ul>
+
+        <h3>Engagement &amp; retention</h3>
+        <ul class="clean">
+          <li><strong>Katha Quest dashboard:</strong> the gamified XP / boss-stage tracker turns "I built one puppet" into "I want the next character" — the bridge from one kit to a collectible line.</li>
+          <li><strong>The line promise:</strong> market Chanakya as the first of a cast (Tenali Rama next, etc.) so each release compounds the last.</li>
+        </ul>
+      </section>
+
+      <!-- 10 -->
+      <section id="progress">
+        <div class="secnum">Section 10</div>
+        <h2>Progress log — what we've built in Claude</h2>
+        <p class="lede">A running record of work already done, so the bible doubles as your "where am I" check. Update the status pills as things move.</p>
+
+        <h3>Brand &amp; identity</h3>
+        <ul class="clean">
+          <li><span class="pill done">Done</span> &nbsp;Full brand identity system — palette, type, "The Torana Stage" creative direction.</li>
+          <li><span class="pill done">Done</span> &nbsp;SVG brand assets and a brand book.</li>
+          <li><span class="pill done">Done</span> &nbsp;Indigo-led colorway explored for Chanakya.</li>
+        </ul>
+
+        <h3>The kit itself</h3>
+        <ul class="clean">
+          <li><span class="pill done">Done</span> &nbsp;Clamshell pencil-box → puppet-stage concept (220 × 90 × 35 mm) locked as the format.</li>
+          <li><span class="pill done">Done</span> &nbsp;Production-grade PDF blueprint (dielines, orthographic views, compartment plan, exploded isometric).</li>
+          <li><span class="pill done">Done</span> &nbsp;Home-print mockup kit.</li>
+          <li><span class="pill done">Done</span> &nbsp;Full Chanakya character bible (appearance, Mauryan clothing, wire-armature construction).</li>
+          <li><span class="pill wip">In progress</span> &nbsp;Final material spec &amp; manufacturer-ready pack.</li>
+        </ul>
+
+        <h3>Web &amp; channel</h3>
+        <ul class="clean">
+          <li><span class="pill done">Done</span> &nbsp;folkwithfolks.in acquired; migrated to Cloudflare Pages via GitHub.</li>
+          <li><span class="pill wip">In progress</span> &nbsp;Three.js character models (Chanakya, Tenali Rama) for the site.</li>
+          <li><span class="pill done">Done</span> &nbsp;YouTube channel setup — banner dimensions, artboard specs, branding.</li>
+        </ul>
+
+        <h3>Content &amp; story</h3>
+        <ul class="clean">
+          <li><span class="pill done">Done</span> &nbsp;Director's shooting script for the 15-sec Reels teaser (image-to-video, stop-motion-on-twos retime).</li>
+          <li><span class="pill done">Done</span> &nbsp;Katha Quest gamified dashboard (XP, boss-stage, localStorage).</li>
+          <li><span class="pill done">Done</span> &nbsp;Digital-product research — Canva, Gumroad, Etsy, Indian marketplaces, GST/LUT.</li>
+        </ul>
+
+        <h3>Tooling &amp; pipeline</h3>
+        <ul class="clean">
+          <li><span class="pill done">Done</span> &nbsp;Maya MCP server (Claude → Autodesk Maya for scene assembly, lighting, rendering).</li>
+          <li><span class="pill done">Done</span> &nbsp;precision-pdf-blueprint skill for editable dielines into Illustrator / CorelDRAW.</li>
+          <li><span class="pill next">Adjacent</span> &nbsp;Melancholia short-film shot division; BAOLI manga concept (separate projects, same studio).</li>
+        </ul>
+      </section>
+
+      <!-- 11 -->
+      <section id="open">
+        <div class="secnum">Section 11</div>
+        <h2>Open decisions</h2>
+        <p class="lede">The handful of things still genuinely undecided. Resolve these and the kit is ready to manufacture and list.</p>
+        <ol>
+          <li><strong>Price points</strong> — physical kit and digital version, built up from real costs.</li>
+          <li><strong>Head: cast vs sculpt</strong> — do you ship a pre-cast Chanakya head, the clay-to-sculpt path, or both in one box?</li>
+          <li><strong>Manufacturer &amp; minimum order</strong> — who prints/assembles the clamshell, and at what run size.</li>
+          <li><strong>First batch size</strong> — workshop-and-presell to fund the run, or commit to a small inventory first.</li>
+          <li><strong>Wit-card content</strong> — final set of Chanakya maxims/prompts, written in his voice.</li>
+          <li><strong>Launch sequence</strong> — Day 1 is the day you actually begin; sequence teaser → site → presell → workshop from there.</li>
+        </ol>
+      </section>
+
+    </div><!-- /wrap -->
+
+    <footer>
+      Folk with Folks · Katha — The Chanakya Kit of Wit · The Bible, v1<br>
+      A living document. Update a section, log the change, keep one source of truth.
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // active-section highlighting in the TOC
+  const links = [...document.querySelectorAll('nav.toc a')];
+  const map = links.map(a => ({a, sec: document.querySelector(a.getAttribute('href'))}));
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const m = map.find(m=>m.sec===e.target);
+        if(m) m.a.classList.add('active');
+      }
+    });
+  },{rootMargin:'-30% 0px -60% 0px',threshold:0});
+  map.forEach(m=>m.sec && obs.observe(m.sec));
+</script>
+</body>
+</html>

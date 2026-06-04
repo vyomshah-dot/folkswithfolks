@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" width="520" height="96" role="img" aria-label="Folk motif set">
+  
+  <circle cx="40" cy="48" r="14" fill="#E8A33D"></circle>
+  
+  <polygon points="130,62 158,62 144,34" fill="#C24E3A"></polygon>
+  
+  <g transform="translate(232,48)">
+    <circle r="11" fill="#E8A33D"></circle>
+    <g stroke="#2A241F" stroke-width="2.4" stroke-linecap="round">
+      <line x1="0" y1="-18" x2="0" y2="-24"></line><line x1="0" y1="18" x2="0" y2="24"></line>
+      <line x1="-18" y1="0" x2="-24" y2="0"></line><line x1="18" y1="0" x2="24" y2="0"></line>
+      <line x1="-13" y1="-13" x2="-18" y2="-18"></line><line x1="13" y1="13" x2="18" y2="18"></line>
+      <line x1="13" y1="-13" x2="18" y2="-18"></line><line x1="-13" y1="13" x2="-18" y2="18"></line>
+    </g>
+  </g>
+  
+  <g transform="translate(326,48)">
+    <path d="M0 18 C-16 6 -16 -10 0 -22 C16 -10 16 6 0 18 Z" fill="#5C7A4A"></path>
+    <line x1="0" y1="16" x2="0" y2="-18" stroke="#F4ECDD" stroke-width="2"></line>
+  </g>
+  
+  <g transform="translate(424,48)">
+    <ellipse cx="0" cy="-14" rx="5" ry="9" fill="#C24E3A"></ellipse>
+    <ellipse cx="0" cy="14" rx="5" ry="9" fill="#C24E3A"></ellipse>
+    <ellipse cx="-14" cy="0" rx="9" ry="5" fill="#C24E3A"></ellipse>
+    <ellipse cx="14" cy="0" rx="9" ry="5" fill="#C24E3A"></ellipse>
+    <circle r="5.5" fill="#E8A33D"></circle>
+  </g>
+  
+  <polygon points="490,48 502,34 514,48 502,62" fill="#7A2E2E"></polygon>
+</svg>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Katha — Brand Overlay Book (v0.1)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../brand-core/tokens.css">
+<style>
+  body { margin: 0; padding: 64px 8vw; max-width: 920px; }
+  body.fwf { background-color: var(--paper); background-image: var(--grain); background-size: var(--grain-size); }
+  h1 { margin-bottom: 8px; }
+  .eyebrow { font-family: var(--font-body); font-weight: 600; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-70); }
+  .katha-mark { font-family: var(--font-story); font-style: italic; font-weight: 700; font-size: 96px; color: var(--terracotta); line-height: 1; letter-spacing: -0.01em; margin: 24px 0 8px; }
+  .endorsement { font-family: var(--font-body); font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-70); margin-bottom: 48px; }
+  section { margin: 56px 0; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; margin-top: 16px; }
+  .swatch { border: var(--border); border-radius: var(--radius); padding: 16px; background: var(--card); }
+  .swatch .chip { display: block; height: 56px; border-radius: 8px; border: 1px solid var(--ink-12); margin-bottom: 8px; }
+  .todo { background: var(--marigold); color: var(--ink); padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  hr { border: none; border-top: 1px solid var(--ink-12); margin: 48px 0; }
+  a { color: var(--terracotta); }
+</style>
+</head>
+<body class="fwf">
+
+  <div class="eyebrow">Katha — Brand Overlay Book v0.1 (2026)</div>
+  <div class="katha-mark">Katha</div>
+  <div class="endorsement">a folk with folks kit</div>
+
+  <p class="lead">
+    This document is an <em>overlay</em>. Katha inherits the full
+    <a href="../folk-with-folks/brand-book.html">Folk with Folks Brand Book</a> — palette,
+    type, motifs, voice, logo geometry. The pages below capture only what is Katha-specific:
+    the logotype, character badges, kit naming, packaging architecture, and product-line voice.
+  </p>
+
+  <section>
+    <h2>1. Architecture</h2>
+    <p>Folk with Folks is the studio. Katha is the product line. Every Katha kit carries the
+    endorsement line <em>"a folk with folks kit"</em> under the Katha logotype.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>2. The Katha logotype</h2>
+    <p><span class="todo">Asset TODO</span> — drop the official vector at
+      <code>assets/katha-logotype.svg</code>.</p>
+    <ul>
+      <li><strong>Family:</strong> Fraunces, italic, weight 600–700</li>
+      <li><strong>Tracking:</strong> −1%</li>
+      <li><strong>Colour:</strong> Terracotta on Paper grounds; Paper on Indigo grounds</li>
+      <li><strong>Minimum size:</strong> 48px tall on screen, 18mm in print</li>
+      <li><strong>Clear space:</strong> one x-height of the lowercase k on every side</li>
+      <li><strong>Never:</strong> re-typeset in another family · skew · add gradients/shadows ·
+        recolour outside the palette</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>3. Character badges</h2>
+    <p><span class="todo">Asset TODO</span> — drop vectors at <code>assets/badges/</code>.</p>
+    <p>Circular seals, ~120 px. One motif inside, character name in Bricolage 800.</p>
+    <div class="swatches">
+      <div class="swatch"><span class="chip" style="background:var(--terracotta)"></span>
+        <strong>Chanakya</strong><br><span class="caption">Sun motif · Kit of Wit</span></div>
+      <div class="swatch"><span class="chip" style="background:var(--marigold)"></span>
+        <strong>Tenali</strong><br><span class="caption">Diamond motif · Kit of Mischief</span></div>
+      <div class="swatch"><span class="chip" style="background:var(--neem)"></span>
+        <strong>Birbal</strong><br><span class="caption">Neem-leaf motif · Kit of Cleverness</span></div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>4. Kit naming</h2>
+    <p>Pattern: <code>&lt;character&gt;'s Kit of &lt;trait&gt;</code>. Sentence case.
+      Examples: <em>Chanakya's Kit of Wit</em>, <em>Tenali's Kit of Mischief</em>,
+      <em>Birbal's Kit of Cleverness</em>.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>5. Packaging</h2>
+    <p>The pencil-box-that-opens-into-a-stage. Full geometry, dielines, materials, and
+      production notes live in the flagship bible:
+      <a href="chanakya-kit-of-wit-bible.html">The Chanakya Kit of Wit — Bible</a>.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>6. Voice flavour</h2>
+    <p>Inherits the FwF voice (warm, curious, cheeky, sentence case, mostly "you", effectively
+      no emoji). Leans a little more cheeky on the kit:</p>
+    <blockquote class="story">
+      "Chanakya outwitted kings. You're about to out-wit a cardboard box.
+      Roughly the same energy."
+    </blockquote>
+    <blockquote class="story">"Snip here. Yes, right there."</blockquote>
+    <blockquote class="story">"Made a wonky one? Good. Wonky has more personality."</blockquote>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>7. Open TODOs</h2>
+    <ul>
+      <li>Official Katha logotype vector</li>
+      <li>Character badge vectors (Chanakya, Tenali, Birbal)</li>
+      <li>Packaging dielines and printable production templates</li>
+      <li>Decide whether kits have per-character accent overrides or stay palette-neutral</li>
+    </ul>
+  </section>
+
+</body>
+</html>

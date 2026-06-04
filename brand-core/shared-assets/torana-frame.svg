@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260" role="img" aria-label="Stepped torana stage frame">
+  <g fill="none" stroke="#2A241F" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 250 L20 130 L46 130 L46 96 L74 96 L74 66 L104 66 L104 44 L216 44 L216 66 L246 66 L246 96 L274 96 L274 130 L300 130 L300 250"></path>
+  </g>
+  
+  <g fill="none" stroke="#C24E3A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.9">
+    <path d="M34 250 L34 138 L58 138 L58 106 L86 106 L86 78 L114 78 L114 56 L206 56 L206 78 L234 78 L234 106 L262 106 L262 138 L286 138 L286 250"></path>
+  </g>
+  
+  <circle cx="160" cy="30" r="9" fill="#E8A33D"></circle>
+  
+  <circle cx="160" cy="50" r="4" fill="#C24E3A"></circle>
+</svg>

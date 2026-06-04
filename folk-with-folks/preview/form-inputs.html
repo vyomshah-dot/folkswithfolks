@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Bricolage Grotesque';src:url('../fonts/BricolageGrotesque-VariableFont_opsz_wdth_wght.ttf') format('truetype');font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('../fonts/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('../fonts/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Hanken Grotesk';src:url('../fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Hanken Grotesk';src:url('../fonts/HankenGrotesk-Italic-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
+</style>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+ html,body{margin:0}
+ body{background:#F4ECDD;padding:24px;box-sizing:border-box;font-family:'Hanken Grotesk';color:#2A241F}
+ .lab{font-weight:600;font-size:11px;letter-spacing:.16em;color:#7A6F62;margin-bottom:14px}
+ .field{margin-bottom:14px;max-width:320px}
+ label{display:block;font-size:12px;font-weight:600;margin-bottom:6px}
+ input,select{width:100%;box-sizing:border-box;font-family:'Hanken Grotesk';font-size:15px;color:#2A241F;background:#fff8ee;border:2px solid #2A241F;border-radius:10px;padding:10px 12px}
+ input::placeholder{color:rgba(42,36,31,.4)}
+ input:focus,select:focus{outline:none;box-shadow:3px 3px 0 0 #C24E3A}
+ .help{font-size:11px;color:#7A6F62;margin-top:5px}
+</style></head>
+<body>
+ <div class="lab">FORM INPUTS</div>
+ <div style="display:flex;gap:24px">
+  <div class="field"><label>Your name</label><input placeholder="Little maker…"><div class="help">We'll print it on the box.</div></div>
+  <div class="field"><label>Age group</label><select><option>7–9 years</option><option>10–12 years</option><option>Grown-up helper</option></select></div>
+ </div>
+</body></html>

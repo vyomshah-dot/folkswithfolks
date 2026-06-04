@@ -1,0 +1,22 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Folk with Folks seal">
+  <defs>
+    <path id="rt" d="M150,150 m-112,0 a112,112 0 1,1 224,0" fill="none"></path>
+    <path id="rb" d="M150,150 m112,0 a112,112 0 1,1 -224,0" fill="none"></path>
+  </defs>
+  <circle cx="150" cy="150" r="138" fill="none" stroke="#2A241F" stroke-width="3"></circle>
+  <circle cx="150" cy="150" r="124" fill="none" stroke="#2A241F" stroke-width="1.5"></circle>
+  <g fill="#2A241F" font-family="&#39;Bricolage Grotesque&#39;, serif" font-weight="700" letter-spacing="3" font-size="17">
+    <text><textPath href="#rt" startOffset="50%" text-anchor="middle">FOLK · WITH · FOLKS</textPath></text>
+    <text><textPath href="#rb" startOffset="50%" text-anchor="middle">A FOLK-CRAFT STUDIO · EST. MMXXVI</textPath></text>
+  </g>
+  <g transform="translate(70,55) scale(0.67)" stroke="#2A241F" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"></circle>
+    <path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178"></path>
+    <line x1="58" y1="178" x2="182" y2="178"></line>
+    <line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"></line><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"></line>
+    <circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"></circle><path d="M86 118 L110 118 L98 138 Z"></path><path d="M98 138 L86 158 L110 158 Z"></path><line x1="92" y1="158" x2="88" y2="178"></line><line x1="104" y1="158" x2="108" y2="178"></line><path d="M86 118 L74 134"></path><path d="M110 119 L120 139"></path>
+    <circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"></circle><path d="M130 118 L154 118 L142 138 Z"></path><path d="M142 138 L130 158 L154 158 Z"></path><line x1="136" y1="158" x2="132" y2="178"></line><line x1="148" y1="158" x2="152" y2="178"></line><path d="M154 118 L166 134"></path><path d="M130 119 L120 139"></path>
+    <circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"></circle>
+  </g>
+  <g fill="#C24E3A"><circle cx="32" cy="150" r="4"></circle><circle cx="268" cy="150" r="4"></circle></g>
+</svg>

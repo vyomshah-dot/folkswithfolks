@@ -1,0 +1,26 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor artefacts
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node / build (in case we ever add tooling)
+node_modules/
+dist/
+.cache/
+
+# Archives — old zips, throwaway scraps
+_archive/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.env.local

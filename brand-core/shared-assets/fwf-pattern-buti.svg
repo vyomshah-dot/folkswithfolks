@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Buti block-print pattern">
+  <defs>
+    <pattern id="buti" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <g stroke="#2A241F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M60 60 Q72 44 60 30 Q48 44 60 60 Z" fill="#C24E3A"></path>
+        <path d="M60 60 Q76 72 90 60 Q76 48 60 60 Z" fill="#5C7A4A"></path>
+        <path d="M60 60 Q48 76 60 90 Q72 76 60 60 Z" fill="#C24E3A"></path>
+        <path d="M60 60 Q44 48 30 60 Q44 72 60 60 Z" fill="#5C7A4A"></path>
+        <circle cx="60" cy="60" r="5" fill="#E8A33D"></circle>
+      </g>
+      <g fill="#2A241F">
+        <circle cx="0" cy="0" r="3"></circle><circle cx="120" cy="0" r="3"></circle><circle cx="0" cy="120" r="3"></circle><circle cx="120" cy="120" r="3"></circle>
+        <circle cx="60" cy="6" r="2"></circle><circle cx="60" cy="114" r="2"></circle><circle cx="6" cy="60" r="2"></circle><circle cx="114" cy="60" r="2"></circle>
+      </g>
+      <g fill="#E8A33D"><path d="M30 18 l5 8 l-10 0 Z"></path><path d="M90 102 l5 -8 l-10 0 Z"></path></g>
+    </pattern>
+  </defs>
+  <rect width="240" height="240" fill="#F4ECDD"></rect>
+  <rect width="240" height="240" fill="url(#buti)"></rect>
+</svg>

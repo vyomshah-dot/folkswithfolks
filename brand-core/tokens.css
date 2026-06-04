@@ -1,0 +1,228 @@
+/* ============================================================================
+   Folk with Folks — Design Tokens
+   "Tales you can hold."
+   Colour + type foundations. The three brand families are self-hosted from
+   /fonts via the @font-face rules below — no CDN needed. Use the semantic vars.
+   ============================================================================ */
+
+/* ---- Self-hosted brand fonts (variable TTFs in /fonts) ---- */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('fonts/BricolageGrotesque-VariableFont_opsz_wdth_wght.ttf') format('truetype');
+  font-weight: 200 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('fonts/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('fonts/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('fonts/HankenGrotesk-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; font-style: italic; font-display: swap;
+}
+
+:root {
+  /* ---- Palette (exact — do not invent new colours) ---- */
+  --ink:        #2A241F;  /* primary text, line art            */
+  --paper:      #F4ECDD;  /* default background                */
+  --paper-deep: #EADDC6;  /* secondary background / deep cards */
+  --card:       #FBF6EB;  /* raised card surface (lighter)     */
+  --terracotta: #C24E3A;  /* primary accent, buttons, headings */
+  --marigold:   #E8A33D;  /* secondary accent, dots, highlights*/
+  --indigo:     #2E3A59;  /* deep background blocks            */
+  --neem:       #5C7A4A;  /* tertiary accent                   */
+  --maroon:     #7A2E2E;  /* warnings / deep accent            */
+
+  /* ---- Tints / shades (derived, for hovers & hairlines) ---- */
+  --ink-70:        rgba(42, 36, 31, 0.70);
+  --ink-45:        rgba(42, 36, 31, 0.45);
+  --ink-12:        rgba(42, 36, 31, 0.12);
+  --terracotta-press: #A8412F; /* darker terracotta for :active */
+  --marigold-soft:    #F0C079; /* light marigold wash           */
+  --paper-on-indigo:  #F4ECDD; /* text colour on indigo blocks  */
+
+  /* ---- Semantic colour roles ---- */
+  --bg:            var(--paper);
+  --bg-card:       var(--paper-deep);
+  --bg-deep:       var(--indigo);
+  --fg1:           var(--ink);          /* primary text          */
+  --fg2:           var(--ink-70);       /* secondary text        */
+  --fg3:           var(--ink-45);       /* captions / hints      */
+  --fg-on-deep:    var(--paper);        /* text on indigo        */
+  --accent:        var(--terracotta);
+  --accent-2:      var(--marigold);
+  --accent-3:      var(--neem);
+  --danger:        var(--maroon);
+  --line:          var(--ink);          /* full-strength borders */
+  --hairline:      var(--ink-12);       /* dividers              */
+
+  /* ---- Type families ---- */
+  --font-display: 'Bricolage Grotesque', 'Arial Black', sans-serif;
+  --font-story:   'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* ---- Type scale (px) ---- */
+  --fs-h1:      64px;
+  --fs-h2:      44px;
+  --fs-h3:      24px;
+  --fs-lead:    21px;
+  --fs-body:    17px;
+  --fs-caption: 13px;
+
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-body:   1.6;
+  --tracking-display: -0.02em;  /* −2% */
+
+  /* ---- Spacing scale (4px base) ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 8px;
+  --radius:    14px;   /* default card / button radius */
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* ---- Borders & shadows (hard ink, no blur) ---- */
+  --border-w: 2px;
+  --border:   var(--border-w) solid var(--ink);
+  --shadow-hard:    5px 5px 0 0 var(--ink);          /* signature offset block */
+  --shadow-hard-sm: 3px 3px 0 0 var(--ink);
+  --shadow-hard-accent: 5px 5px 0 0 var(--terracotta);
+
+  /* ---- Paper grain dot texture (brand-book value: 1px dots @ 3.5% on 22px) ---- */
+  --grain: radial-gradient(rgba(42,36,31,0.035) 1px, transparent 1px);
+  --grain-size: 22px 22px;
+  --grain-deep: radial-gradient(rgba(244,236,221,0.06) 1px, transparent 1px);
+}
+
+/* ============================================================================
+   Semantic element styles — opt in with class .fwf or apply on <body>.
+   ============================================================================ */
+
+.fwf {
+  background-color: var(--bg);
+  background-image: var(--grain);
+  background-size: var(--grain-size);
+  color: var(--fg1);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.fwf h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg1);
+  margin: 0;
+}
+.fwf h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg1);
+  margin: 0;
+}
+.fwf h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg1);
+  margin: 0;
+}
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+  color: var(--fg2);
+}
+.fwf p, .body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg1);
+}
+.caption {
+  font-size: var(--fs-caption);
+  line-height: 1.4;
+  color: var(--fg3);
+  letter-spacing: 0.02em;
+}
+/* Story / quote flourish */
+.story {
+  font-family: var(--font-story);
+  font-style: italic;
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+  color: var(--fg1);
+}
+
+/* Heading highlight — terracotta marker behind a word */
+.mark {
+  color: var(--terracotta);
+}
+.mark-band {
+  background: var(--marigold);
+  color: var(--ink);
+  padding: 0 0.18em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ---- Card ---- */
+/* Cards default to the lighter raised tone (--card); use .card--deep for paper-deep. */
+.card {
+  background: var(--card);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+}
+.card--deep { background: var(--paper-deep); }
+.card--shadow { box-shadow: var(--shadow-hard); }
+
+/* ---- Buttons ---- */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  background: var(--terracotta);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+.btn:hover  { background: #CC5942; }
+.btn:active { background: var(--terracotta-press); transform: translate(2px, 2px); }
+.btn--pill  { border-radius: var(--radius-pill); }
+.btn--ghost { background: transparent; }
+.btn--ghost:hover { background: var(--ink-12); }
+.btn--marigold { background: var(--marigold); }
+.btn--marigold:hover { background: #EEAE54; }

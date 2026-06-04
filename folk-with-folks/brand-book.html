@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Folk with Folks — Brand Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A241F; --paper:#F4ECDD; --paper2:#EADDC6; --card:#FBF6EB;
+    --terra:#C24E3A; --marigold:#E8A33D; --indigo:#2E3A59; --leaf:#5C7A4A; --maroon:#7A2E2E;
+    --disp:"Bricolage Grotesque",serif; --serif:"Fraunces",Georgia,serif; --body:"Hanken Grotesk",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink); font-family:var(--body);
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(rgba(42,36,31,.035) 1px, transparent 1px);
+    background-size:22px 22px;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 28px}
+  section{padding:74px 0; border-bottom:2px solid rgba(42,36,31,.12)}
+  h1,h2,h3{font-family:var(--disp); font-weight:800; line-height:1.02; letter-spacing:-.02em; margin:0}
+  h2{font-size:clamp(30px,5vw,52px); margin-bottom:8px}
+  h3{font-size:22px; font-weight:600; letter-spacing:-.01em}
+  .kicker{font-family:var(--body); font-weight:700; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--terra); margin-bottom:18px; display:flex; align-items:center; gap:10px}
+  .kicker::before{content:""; width:26px; height:2px; background:var(--terra); display:inline-block}
+  p{margin:0 0 16px}
+  .lead{font-family:var(--serif); font-size:21px; line-height:1.5; font-weight:400}
+  .muted{color:rgba(42,36,31,.66)}
+  em.s{font-family:var(--serif); font-style:italic}
+  a{color:var(--maroon)}
+
+  /* HERO */
+  .hero{background:var(--ink); color:var(--paper); border-bottom:none; padding:64px 0 76px; position:relative; overflow:hidden}
+  .hero .wrap{position:relative; z-index:2}
+  .hero h1{font-size:clamp(44px,9vw,104px); color:var(--paper); letter-spacing:-.03em}
+  .hero .with{font-family:var(--serif); font-style:italic; font-weight:500; color:var(--marigold); font-size:.62em; letter-spacing:0}
+  .hero .sub{font-family:var(--serif); font-style:italic; font-size:22px; color:var(--paper2); margin-top:12px}
+  .hero .tag{margin-top:26px; font-size:15px; letter-spacing:.18em; text-transform:uppercase; color:rgba(244,236,221,.6); font-weight:600}
+  .hero-mark{position:absolute; right:-30px; top:50%; transform:translateY(-50%); width:340px; opacity:.9; z-index:1}
+  .hero-mark svg{width:100%; height:auto}
+  @media(max-width:760px){.hero-mark{position:static; transform:none; width:200px; margin:24px auto 0; display:block} .hero{text-align:center}}
+
+  /* generic layout helpers */
+  .grid{display:grid; gap:22px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:760px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card); border:2px solid var(--ink); border-radius:14px; padding:24px}
+  .soft{box-shadow:5px 5px 0 rgba(42,36,31,.9)}
+
+  /* inventory list */
+  .inv{display:grid; grid-template-columns:1fr 1fr; gap:14px 34px}
+  @media(max-width:760px){.inv{grid-template-columns:1fr}}
+  .invcol h3{margin:18px 0 10px; padding-bottom:8px; border-bottom:2px dotted rgba(42,36,31,.3); color:var(--indigo)}
+  .invcol ul{list-style:none; padding:0; margin:0}
+  .invcol li{padding:5px 0 5px 26px; position:relative; font-size:15.5px}
+  .invcol li::before{content:"◆"; position:absolute; left:0; color:var(--terra); font-size:10px; top:8px}
+  .invcol li b{font-weight:700}
+
+  /* logo zone */
+  .logobox{background:var(--card); border:2px solid var(--ink); border-radius:14px; display:flex; align-items:center; justify-content:center; padding:34px; min-height:200px}
+  .logobox.ink{background:var(--ink)}
+  .logobox.terra{background:var(--terra)}
+  .wordmark{font-family:var(--disp); font-weight:800; font-size:clamp(30px,6vw,56px); letter-spacing:-.03em; line-height:.92; color:var(--ink)}
+  .wordmark .w{font-family:var(--serif); font-style:italic; font-weight:500; color:var(--terra); display:inline-block; transform:translateY(-2px)}
+  .wordmark.rev{color:var(--paper)} .wordmark.rev .w{color:var(--marigold)}
+  .lockup{display:flex; align-items:center; gap:20px}
+  .lockup svg{width:84px; flex:none}
+  .stack{flex-direction:column; gap:14px; text-align:center}
+  .caption{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(42,36,31,.55); font-weight:700; margin-top:10px; text-align:center}
+
+  /* color */
+  .swatch{border:2px solid var(--ink); border-radius:12px; overflow:hidden}
+  .swatch .chip{height:120px}
+  .swatch .meta{padding:12px 14px; background:var(--card)}
+  .swatch .nm{font-family:var(--disp); font-weight:700; font-size:16px}
+  .swatch .hex{font-size:13px; letter-spacing:.04em; color:rgba(42,36,31,.7)}
+  .swatch .cmyk{font-size:11.5px; color:rgba(42,36,31,.5); margin-top:2px}
+
+  /* type */
+  .specimen{background:var(--card); border:2px solid var(--ink); border-radius:14px; padding:26px; margin-bottom:18px}
+  .specimen .lbl{font-size:12px; letter-spacing:.2em; text-transform:uppercase; font-weight:700; color:var(--terra)}
+  .glyphs{font-family:var(--disp); font-size:46px; letter-spacing:-.01em; margin:8px 0}
+  .ser-spec{font-family:var(--serif); font-size:34px; font-style:italic; line-height:1.2}
+  .body-spec{font-family:var(--body); font-size:17px; max-width:62ch}
+
+  /* dont/do */
+  .pill{display:inline-block; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:20px}
+  .do{background:var(--leaf); color:#fff} .dont{background:var(--maroon); color:#fff}
+
+  /* arch architecture */
+  .arch-row{display:flex; gap:18px; flex-wrap:wrap}
+  .brandcard{flex:1; min-width:220px; background:var(--card); border:2px solid var(--ink); border-radius:14px; padding:22px}
+  .brandcard .role{font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--terra)}
+  .brandcard h3{margin:6px 0 8px; font-family:var(--disp); font-size:26px; font-weight:800}
+
+  /* pattern strip */
+  .patstrip{height:120px; border:2px solid var(--ink); border-radius:12px}
+
+  /* toc */
+  .toc{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
+  .toc a{font-size:13px; font-weight:600; text-decoration:none; color:var(--ink); border:2px solid var(--ink); padding:7px 13px; border-radius:30px; background:var(--card)}
+  .toc a:hover{background:var(--marigold)}
+
+  .ornament{display:flex; justify-content:center; margin:6px 0 30px}
+  .ornament svg{width:280px}
+  footer{background:var(--ink); color:var(--paper2); padding:40px 0; border:none}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:14px}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--marigold)">Brand Book · v1 · 2026</div>
+    <h1>folk <span class="with">with</span> folks</h1>
+    <div class="sub">A folk-craft studio. Tales you can hold.</div>
+    <div class="tag">Puppetry · Stop-motion · Indian folk tales · Craft for curious kids</div>
+  </div>
+  <div class="hero-mark">
+    <!-- SYMBOL -->
+    <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Folk with Folks symbol">
+      <g stroke="#F4ECDD" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#F4ECDD" stroke-width="2.6"/>
+        <path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178" fill="none"/>
+        <line x1="58" y1="178" x2="182" y2="178"/>
+        <line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"/><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"/>
+        <circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#F4ECDD"/>
+        <path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/>
+        <line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/>
+        <path d="M86 118 L74 134"/><path d="M110 119 L120 139"/>
+        <circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#F4ECDD"/>
+        <path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/>
+        <line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/>
+        <path d="M154 118 L166 134"/><path d="M130 119 L120 139"/>
+        <circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#F4ECDD" stroke-width="2.4"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<!-- TOC -->
+<section style="padding:34px 0">
+  <div class="wrap">
+    <div class="kicker">What's inside</div>
+    <div class="toc">
+      <a href="#idea">The Idea</a>
+      <a href="#kit">The Full Kit — everything you can use</a>
+      <a href="#logo">Logo System</a>
+      <a href="#color">Colour</a>
+      <a href="#type">Type</a>
+      <a href="#pattern">Pattern & Motif</a>
+      <a href="#arch">Brand Architecture</a>
+      <a href="#voice">Voice</a>
+      <a href="#apply">Applications</a>
+      <a href="#files">Asset Files</a>
+    </div>
+  </div>
+</section>
+
+<!-- IDEA -->
+<section id="idea">
+  <div class="wrap">
+    <div class="kicker">The Idea</div>
+    <h2>One house, many tales.</h2>
+    <p class="lead">Folk with Folks is the studio. It exists to put Indian folk stories back into people's hands — literally — through puppets, kits, films and workshops. The name carries its whole job: <em class="s">folk</em> (the tradition, the craft, the characters) brought to <em class="s">folks</em> (families, kids, the curious), and made <em class="s">with</em> folks, not for them.</p>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="card soft"><h3>The mark means</h3><p class="muted" style="margin:8px 0 0; font-size:15px">A stepped <b>torana</b> — the temple/festival arch, doubling as a puppet <b>stage</b> — framing two Warli figures joined at the hands. Folk craft, the stage in every Katha kit, and people together, in one mark.</p></div>
+      <div class="card soft"><h3>The feeling</h3><p class="muted" style="margin:8px 0 0; font-size:15px">Handmade, warm, a little wonky. Block-print and clay, not glossy plastic. Credible enough for a studio, playful enough for a seven-year-old.</p></div>
+      <div class="card soft"><h3>The promise</h3><p class="muted" style="margin:8px 0 0; font-size:15px"><em class="s">Tales you can hold.</em> Every product turns a story into something a child builds with their own hands.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL KIT / INVENTORY -->
+<section id="kit">
+  <div class="wrap">
+    <div class="kicker">The Full Kit</div>
+    <h2>Everything you can use.</h2>
+    <p class="lead muted">Your complete toolbox. Anything below tagged <b style="color:var(--leaf)">✓ built</b> ships in this pack as an editable file; the rest are slots to fill as you grow — but the system already names and sizes them for you.</p>
+    <div class="inv" style="margin-top:30px">
+      <div class="invcol">
+        <h3>1 · Identity core</h3>
+        <ul>
+          <li><b>Primary symbol</b> — the Torana Stage mark <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Wordmark</b> — "folk with folks" typeset <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Horizontal lockup</b> (symbol + wordmark) <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Stacked lockup</b> (symbol over wordmark) <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Circular seal / stamp</b> — packaging & wax-seal use <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Mono / 1-colour mark</b> — for emboss, stamp, foil <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Favicon / app icon</b> — symbol on terracotta</li>
+          <li><b>Clear-space & min-size rules</b> <b style="color:var(--leaf)">✓ built</b></li>
+        </ul>
+        <h3>2 · Colour</h3>
+        <ul>
+          <li><b>Core palette</b> — ink, paper, terracotta, marigold <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Accents</b> — indigo, leaf, maroon <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>HEX · RGB · CMYK</b> for screen + print <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Swatch file</b> (.ase) to load into Illustrator/Corel</li>
+        </ul>
+        <h3>3 · Typography</h3>
+        <ul>
+          <li><b>Display</b> — Bricolage Grotesque <b style="color:var(--leaf)">✓ set</b></li>
+          <li><b>Story / quotes</b> — Fraunces (italic) <b style="color:var(--leaf)">✓ set</b></li>
+          <li><b>Body / UI</b> — Hanken Grotesk <b style="color:var(--leaf)">✓ set</b></li>
+          <li><b>Type scale & pairing rules</b> <b style="color:var(--leaf)">✓ built</b></li>
+        </ul>
+        <h3>4 · Pattern & ornament</h3>
+        <ul>
+          <li><b>Buti pattern tile</b> (seamless) <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Folk divider / rule</b> <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Motif set</b> — sun, triangle, leaf, dot, figure</li>
+          <li><b>Border frames</b> for posters & manual pages</li>
+          <li><b>Texture</b> — paper grain overlay</li>
+        </ul>
+      </div>
+      <div class="invcol">
+        <h3>5 · Sub-brand system</h3>
+        <ul>
+          <li><b>Katha</b> product-line lockup (sits under FwF) <b style="color:var(--leaf)">✓ built</b></li>
+          <li><b>Endorsement line</b> — "a Folk with Folks kit"</li>
+          <li><b>Kit naming pattern</b> — <em class="s">Chanakya's Kit of Wit, Tenali's Kit of…</em></li>
+          <li><b>Character badge</b> slot (one per character)</li>
+        </ul>
+        <h3>6 · Social — @katha.by.vyom</h3>
+        <ul>
+          <li><b>Profile picture</b> (symbol in circle)</li>
+          <li><b>Story highlight covers</b> — icon set</li>
+          <li><b>Post / Reel frame templates</b> (1:1, 4:5, 9:16)</li>
+          <li><b>Quote / caption card</b> template</li>
+          <li><b>"Behind the build" carousel</b> template</li>
+          <li><b>Watermark / sign-off</b> mark</li>
+        </ul>
+        <h3>7 · Product & packaging</h3>
+        <ul>
+          <li><b>Box system</b> (pencil-box / clamshell) skin</li>
+          <li><b>Manual cover + section dividers</b> (3-section)</li>
+          <li><b>Sticker sheet</b> & seal labels</li>
+          <li><b>Thank-you / story card</b> insert</li>
+          <li><b>Gumroad / digital-product cover</b></li>
+        </ul>
+        <h3>8 · Workshop & events</h3>
+        <ul>
+          <li><b>Poster / flyer</b> template (café workshops)</li>
+          <li><b>Name tags, table tents, signage</b></li>
+          <li><b>Certificate of completion</b> for kids</li>
+          <li><b>BookMyShow / event listing</b> banner</li>
+        </ul>
+        <h3>9 · Studio basics</h3>
+        <ul>
+          <li><b>Email signature</b> & letterhead</li>
+          <li><b>Business / contact card</b></li>
+          <li><b>Invoice / quote</b> header</li>
+          <li><b>Deck / pitch</b> cover & template</li>
+          <li><b>YouTube</b> ("Folk with Folks") banner + end-card</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section id="logo">
+  <div class="wrap">
+    <div class="kicker">Logo System</div>
+    <h2>The mark, four ways.</h2>
+    <p class="lead muted">Use the fullest version that fits. When in doubt, give it room and keep it on paper or ink — never on a busy photo.</p>
+
+    <div class="grid g2" style="margin-top:28px">
+      <div>
+        <div class="logobox">
+          <div class="lockup">
+            <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#2A241F" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"/>
+                <path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178" fill="none"/>
+                <line x1="58" y1="178" x2="182" y2="178"/>
+                <line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"/><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"/>
+                <circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/><line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/><path d="M86 118 L74 134"/><path d="M110 119 L120 139"/>
+                <circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/><line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/><path d="M154 118 L166 134"/><path d="M130 119 L120 139"/>
+                <circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"/>
+              </g>
+            </svg>
+            <div class="wordmark">folk<br><span class="w">with</span><br>folks</div>
+          </div>
+        </div>
+        <div class="caption">Primary horizontal lockup</div>
+      </div>
+      <div>
+        <div class="logobox stack" style="flex-direction:column">
+          <svg viewBox="0 0 240 240" width="110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#2A241F" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"/>
+              <path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178"/>
+              <line x1="58" y1="178" x2="182" y2="178"/>
+              <line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"/><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"/>
+              <circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/><line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/><path d="M86 118 L74 134"/><path d="M110 119 L120 139"/>
+              <circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/><line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/><path d="M154 118 L166 134"/><path d="M130 119 L120 139"/>
+              <circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"/>
+            </g>
+          </svg>
+          <div class="wordmark" style="font-size:30px; line-height:.95; text-align:center">folk <span class="w">with</span> folks</div>
+        </div>
+        <div class="caption">Stacked lockup (avatars, stamps, tight spaces)</div>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:22px">
+      <div>
+        <div class="logobox ink"><div class="wordmark rev">folk <span class="w">with</span> folks</div></div>
+        <div class="caption">Reversed — ink ground</div>
+      </div>
+      <div>
+        <div class="logobox terra"><div class="wordmark rev" style="color:#F4ECDD">folk <span class="w" style="color:#2A241F">with</span> folks</div></div>
+        <div class="caption">On terracotta</div>
+      </div>
+      <div>
+        <div class="logobox" style="padding:18px">
+          <!-- SEAL -->
+          <svg width="150" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs><path id="rt" d="M150,150 m-112,0 a112,112 0 1,1 224,0" fill="none"/><path id="rb" d="M150,150 m112,0 a112,112 0 1,1 -224,0" fill="none"/></defs>
+            <circle cx="150" cy="150" r="138" fill="none" stroke="#2A241F" stroke-width="3"/>
+            <circle cx="150" cy="150" r="124" fill="none" stroke="#2A241F" stroke-width="1.5"/>
+            <g fill="#2A241F" font-family="Bricolage Grotesque, serif" font-weight="700" letter-spacing="3" font-size="17">
+              <text><textPath href="#rt" startOffset="50%" text-anchor="middle">FOLK · WITH · FOLKS</textPath></text>
+              <text><textPath href="#rb" startOffset="50%" text-anchor="middle">A FOLK-CRAFT STUDIO · EST. MMXXVI</textPath></text>
+            </g>
+            <g transform="translate(70,55) scale(0.67)" stroke="#2A241F" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"/>
+              <path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178" fill="none"/>
+              <line x1="58" y1="178" x2="182" y2="178"/><line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"/><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"/>
+              <circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/><line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/><path d="M86 118 L74 134"/><path d="M110 119 L120 139"/>
+              <circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/><line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/><path d="M154 118 L166 134"/><path d="M130 119 L120 139"/>
+              <circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"/>
+            </g>
+            <g fill="#C24E3A"><circle cx="32" cy="150" r="4"/><circle cx="268" cy="150" r="4"/></g>
+          </svg>
+        </div>
+        <div class="caption">Seal — packaging, stickers, sign-off</div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:26px">
+      <div class="card"><div class="pill do">Do</div>
+        <ul class="muted" style="margin:12px 0 0; padding-left:18px; font-size:15px">
+          <li>Keep clear space of one figure-height on all sides.</li>
+          <li>Minimum size: symbol 24&nbsp;px / 9&nbsp;mm; full lockup 120&nbsp;px / 30&nbsp;mm.</li>
+          <li>Place on paper, ink, terracotta, or a calm photo area.</li>
+          <li>Use mono version for emboss, single-colour print, stamps.</li>
+        </ul>
+      </div>
+      <div class="card"><div class="pill dont">Don't</div>
+        <ul class="muted" style="margin:12px 0 0; padding-left:18px; font-size:15px">
+          <li>Recolour the figures outside the palette or add gradients.</li>
+          <li>Stretch, rotate, or add drop-shadows / outer glows.</li>
+          <li>Place on busy patterns or low-contrast backgrounds.</li>
+          <li>Re-typeset the wordmark in a different font.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOR -->
+<section id="color">
+  <div class="wrap">
+    <div class="kicker">Colour</div>
+    <h2>The clay palette.</h2>
+    <p class="lead muted">Pulled from puppetry and block-print: fired clay, festival marigold, indigo dye, neem leaf — all resting on handmade paper. <b>Ink and paper do most of the work; terracotta and marigold are the voice; indigo, leaf and maroon are seasoning.</b></p>
+    <div class="grid g4" style="margin-top:26px">
+      <div class="swatch"><div class="chip" style="background:#2A241F"></div><div class="meta"><div class="nm">Ink</div><div class="hex">#2A241F · 42 36 31</div><div class="cmyk">C0 M14 Y26 K84</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#F4ECDD"></div><div class="meta"><div class="nm">Paper</div><div class="hex">#F4ECDD · 244 236 221</div><div class="cmyk">C0 M3 Y9 K4</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#C24E3A"></div><div class="meta"><div class="nm">Terracotta</div><div class="hex">#C24E3A · 194 78 58</div><div class="cmyk">C0 M60 Y70 K24</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E8A33D"></div><div class="meta"><div class="nm">Marigold</div><div class="hex">#E8A33D · 232 163 61</div><div class="cmyk">C0 M30 Y74 K9</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#2E3A59"></div><div class="meta"><div class="nm">Indigo</div><div class="hex">#2E3A59 · 46 58 89</div><div class="cmyk">C48 M35 Y0 K65</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#5C7A4A"></div><div class="meta"><div class="nm">Neem Leaf</div><div class="hex">#5C7A4A · 92 122 74</div><div class="cmyk">C25 M0 Y39 K52</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#7A2E2E"></div><div class="meta"><div class="nm">Maroon</div><div class="hex">#7A2E2E · 122 46 46</div><div class="cmyk">C0 M62 Y62 K52</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#EADDC6"></div><div class="meta"><div class="nm">Paper Deep</div><div class="hex">#EADDC6 · 234 221 198</div><div class="cmyk">C0 M5 Y15 K8</div></div></div>
+    </div>
+    <p class="muted" style="font-size:14px; margin-top:18px">Rough ratio: <b>60%</b> paper · <b>20%</b> ink · <b>12%</b> terracotta + marigold · <b>8%</b> indigo / leaf / maroon. CMYK values are starting points — pull a physical proof before any box run.</p>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section id="type">
+  <div class="wrap">
+    <div class="kicker">Type</div>
+    <h2>Three voices.</h2>
+    <p class="lead muted">A modern grotesque with character does the talking; a warm literary serif tells the tales; a clean humanist sans keeps instructions legible for small hands and tired eyes. All three are free on Google Fonts.</p>
+
+    <div class="specimen" style="margin-top:26px">
+      <div class="lbl">Display — Bricolage Grotesque · 600 / 800</div>
+      <div class="glyphs" style="font-weight:800">Tales you can hold</div>
+      <div class="muted" style="font-size:14px">Headlines, the wordmark, product names, posters. Set tight (letter-spacing −2 to −3%). ABCDEFG abcdefg 0123456789</div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Story / Quotes — Fraunces · italic</div>
+      <div class="ser-spec">"Once, in the court of a clever king…"</div>
+      <div class="muted" style="font-size:14px; margin-top:8px">Story openings, pull-quotes, the "with" in the wordmark, captions with warmth. Italic for flourish, roman for longer reads.</div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Body / UI — Hanken Grotesk · 400 / 600</div>
+      <p class="body-spec" style="margin:6px 0 0">Twist the wire into a loop for the head, then a longer length for the spine. Press the foil around it, a little at a time, until your puppet has shoulders. This is the workhorse: manuals, instructions, captions, web, decks — anything someone has to actually read and follow.</p>
+    </div>
+    <p class="muted" style="font-size:14px">Scale (web px): H1 64 · H2 44 · H3 24 · lead 21 · body 17 · caption 13. Line-height ~1.6 for body, ~1.05 for display.</p>
+  </div>
+</section>
+
+<!-- PATTERN -->
+<section id="pattern">
+  <div class="wrap">
+    <div class="kicker">Pattern & Motif</div>
+    <h2>The folk layer.</h2>
+    <p class="lead muted">A seamless <em class="s">buti</em> (block-print flower) tile and a small motif vocabulary you can scatter as borders, endpapers, sticker fills and Instagram backgrounds. Keep it sparse — it should feel like a hand stamped it, not a printer.</p>
+
+    <div style="margin-top:24px" class="patstrip">
+      <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="butiP" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+            <g stroke="#2A241F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M60 60 Q72 44 60 30 Q48 44 60 60 Z" fill="#C24E3A"/><path d="M60 60 Q76 72 90 60 Q76 48 60 60 Z" fill="#5C7A4A"/><path d="M60 60 Q48 76 60 90 Q72 76 60 60 Z" fill="#C24E3A"/><path d="M60 60 Q44 48 30 60 Q44 72 60 60 Z" fill="#5C7A4A"/><circle cx="60" cy="60" r="5" fill="#E8A33D"/>
+            </g>
+            <g fill="#2A241F"><circle cx="0" cy="0" r="3"/><circle cx="120" cy="0" r="3"/><circle cx="0" cy="120" r="3"/><circle cx="120" cy="120" r="3"/><circle cx="60" cy="6" r="2"/><circle cx="60" cy="114" r="2"/><circle cx="6" cy="60" r="2"/><circle cx="114" cy="60" r="2"/></g>
+            <g fill="#E8A33D"><path d="M30 18 l5 8 l-10 0 Z"/><path d="M90 102 l5 -8 l-10 0 Z"/></g>
+          </pattern>
+        </defs>
+        <rect width="480" height="120" fill="#F4ECDD"/><rect width="480" height="120" fill="url(#butiP)"/>
+      </svg>
+    </div>
+
+    <div class="ornament" style="margin-top:30px">
+      <svg viewBox="0 0 320 28" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#2A241F" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="8" y1="14" x2="120" y2="14"/><line x1="200" y1="14" x2="312" y2="14"/>
+          <path d="M150 14 Q160 4 170 14 Q160 24 150 14 Z" fill="#C24E3A"/>
+          <circle cx="160" cy="14" r="2.5" fill="#E8A33D" stroke="none"/><circle cx="132" cy="14" r="2.5" fill="#2A241F" stroke="none"/><circle cx="188" cy="14" r="2.5" fill="#2A241F" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+    <p class="muted" style="text-align:center; font-size:14px">Divider — use to break manual sections, captions, and deck slides.</p>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="arch">
+  <div class="wrap">
+    <div class="kicker">Brand Architecture</div>
+    <h2>The house and its rooms.</h2>
+    <p class="lead muted">Folk with Folks is the <b>master brand</b> (the studio). Everything you make is "a Folk with Folks ___". Katha is the first room.</p>
+    <div class="arch-row" style="margin-top:26px">
+      <div class="brandcard" style="border-color:var(--ink); border-width:3px">
+        <div class="role">Master brand · studio</div>
+        <h3>Folk with Folks</h3>
+        <p class="muted" style="font-size:15px; margin:0">The full identity. Owns the mark, palette, voice. Signs off everything: <em class="s">"a Folk with Folks kit / film / workshop."</em></p>
+      </div>
+      <div class="brandcard">
+        <div class="role">Product line</div>
+        <h3>Katha</h3>
+        <p class="muted" style="font-size:15px; margin:0">DIY puppet-making kits. Uses FwF palette + type, with its own playful logotype and per-character badges. Naming: <em class="s">Chanakya's Kit of Wit, Tenali's Kit of…</em></p>
+      </div>
+      <div class="brandcard">
+        <div class="role">Channel · future</div>
+        <h3>Folk with Folks <span style="font-size:14px; font-weight:400">(YouTube)</span></h3>
+        <p class="muted" style="font-size:15px; margin:0">Animated folk tales. Same name as the studio — it's the studio's voice on screen. Banner + end-card use the mark directly.</p>
+      </div>
+    </div>
+    <div class="card soft" style="margin-top:22px">
+      <h3 style="margin-bottom:6px">Lockup: Katha under the house</h3>
+      <div class="lockup" style="margin-top:14px; gap:16px; align-items:center">
+        <svg viewBox="0 0 240 240" width="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#2A241F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"/><path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178"/><line x1="58" y1="178" x2="182" y2="178"/><line x1="98" y1="78" x2="98" y2="95" stroke-width="1.6"/><line x1="142" y1="78" x2="142" y2="95" stroke-width="1.6"/><circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/><line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/><path d="M86 118 L74 134"/><path d="M110 119 L120 139"/><circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/><line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/><path d="M154 118 L166 134"/><path d="M130 119 L120 139"/><circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"/>
+          </g>
+        </svg>
+        <div>
+          <div style="font-family:var(--serif); font-style:italic; font-size:34px; color:var(--terra); line-height:1">Katha</div>
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; color:rgba(42,36,31,.6); margin-top:4px">a folk with folks kit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section id="voice">
+  <div class="wrap">
+    <div class="kicker">Voice</div>
+    <h2>How it talks.</h2>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card"><h3>We are</h3><p class="muted" style="margin:8px 0 0; font-size:15px">Warm, curious, a touch cheeky. We treat kids as clever and adults as kids-who-forgot. We tell, we don't lecture. Short sentences. A wink, never a sneer.</p></div>
+      <div class="card"><h3>We aren't</h3><p class="muted" style="margin:8px 0 0; font-size:15px">Preachy, precious, or "educational" in the dull sense. No corporate craft-speak. No earnest heritage worship — folk culture is alive and funny, not a museum.</p></div>
+    </div>
+    <div class="card soft" style="margin-top:18px; background:var(--indigo); color:var(--paper); border-color:var(--indigo)">
+      <div style="font-family:var(--serif); font-style:italic; font-size:24px; line-height:1.4">"Chanakya outwitted kings. You're about to out-wit a cardboard box. Roughly the same energy."</div>
+      <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-top:12px; color:var(--marigold); font-weight:700">Sample — Katha kit copy</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section id="apply">
+  <div class="wrap">
+    <div class="kicker">Applications</div>
+    <h2>Out in the world.</h2>
+    <div class="grid g3" style="margin-top:24px">
+      <!-- IG avatar -->
+      <div>
+        <div class="logobox terra" style="min-height:170px">
+          <div style="width:120px;height:120px;border-radius:50%;background:#F4ECDD;border:3px solid #2A241F;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 240 240" width="90" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="#2A241F" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="120" cy="50" r="7" fill="#E8A33D" stroke="#2A241F" stroke-width="2.6"/><path d="M52 178 L52 96 L74 96 L74 78 L106 78 L106 64 L134 64 L134 78 L166 78 L166 96 L188 96 L188 178"/><line x1="58" y1="178" x2="182" y2="178"/><circle cx="98" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M86 118 L110 118 L98 138 Z"/><path d="M98 138 L86 158 L110 158 Z"/><line x1="92" y1="158" x2="88" y2="178"/><line x1="104" y1="158" x2="108" y2="178"/><path d="M86 118 L74 134"/><path d="M110 119 L120 139"/><circle cx="142" cy="104" r="8.5" fill="#C24E3A" stroke="#2A241F"/><path d="M130 118 L154 118 L142 138 Z"/><path d="M142 138 L130 158 L154 158 Z"/><line x1="136" y1="158" x2="132" y2="178"/><line x1="148" y1="158" x2="152" y2="178"/><path d="M154 118 L166 134"/><path d="M130 119 L120 139"/><circle cx="120" cy="140" r="4.5" fill="#E8A33D" stroke="#2A241F" stroke-width="2.4"/></g></svg>
+          </div>
+        </div>
+        <div class="caption">@katha.by.vyom profile</div>
+      </div>
+      <!-- box -->
+      <div>
+        <div class="logobox" style="min-height:170px; background:var(--paper2); padding:18px">
+          <div style="width:100%;height:130px;background:#F4ECDD;border:2.5px solid #2A241F;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden">
+            <div style="position:absolute;inset:0;opacity:.5"><svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#butiP)"/></svg></div>
+            <div style="font-family:var(--serif);font-style:italic;font-size:24px;color:var(--terra);position:relative">Chanakya's</div>
+            <div style="font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:-.02em;position:relative">KIT OF WIT</div>
+            <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:rgba(42,36,31,.6);position:relative">a folk with folks kit</div>
+          </div>
+        </div>
+        <div class="caption">Katha box face</div>
+      </div>
+      <!-- poster -->
+      <div>
+        <div class="logobox ink" style="min-height:170px; padding:18px">
+          <div style="text-align:center;color:#F4ECDD">
+            <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);font-weight:700">Sunday · café workshop</div>
+            <div style="font-family:var(--disp);font-weight:800;font-size:26px;line-height:1;margin:8px 0">BUILD A<br>PUPPET</div>
+            <div style="font-family:var(--serif);font-style:italic;font-size:15px;color:var(--paper2)">bring a kid, or be one</div>
+          </div>
+        </div>
+        <div class="caption">Workshop poster</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILES -->
+<section id="files">
+  <div class="wrap">
+    <div class="kicker">Asset Files</div>
+    <h2>What's in the pack.</h2>
+    <p class="lead muted">All vectors are editable SVG — open straight in Illustrator or CorelDRAW, recolour from the palette, convert text to outlines before sending to print.</p>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin-bottom:10px">Editable vectors (.svg)</h3>
+        <ul class="muted" style="padding-left:18px; margin:0; font-size:15px">
+          <li><b>fwf-symbol.svg</b> — primary mark, full colour</li>
+          <li><b>fwf-symbol-mono.svg</b> — 1-colour for stamp / emboss / foil</li>
+          <li><b>fwf-seal.svg</b> — circular stamp</li>
+          <li><b>fwf-divider.svg</b> — folk rule / ornament</li>
+          <li><b>fwf-pattern-buti.svg</b> — seamless tile (defines a <code>&lt;pattern&gt;</code> you can fill any shape with)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px">This document</h3>
+        <ul class="muted" style="padding-left:18px; margin:0; font-size:15px">
+          <li><b>folk-with-folks-brand-book.html</b> — the living reference; share or print to PDF.</li>
+        </ul>
+        <h3 style="margin:18px 0 10px">Fonts (free — Google Fonts)</h3>
+        <ul class="muted" style="padding-left:18px; margin:0; font-size:15px">
+          <li>Bricolage Grotesque · Fraunces · Hanken Grotesk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card soft" style="margin-top:20px; background:var(--card)">
+      <h3>Build order — what to make next</h3>
+      <p class="muted" style="margin:10px 0 0; font-size:15px">For your Katha-first sprint, the highest-leverage pieces from the kit above: <b>1)</b> the Instagram avatar + 3 highlight covers (1 hour, instant brand lift on @katha.by.vyom) · <b>2)</b> the Katha box face + seal applied to your existing packaging blueprint · <b>3)</b> the 3-section manual cover + dividers · <b>4)</b> one workshop poster template you can reskin per event. Everything reuses the five vectors and three fonts — no new design decisions needed.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Folk with Folks — Brand Book v1 · 2026</div>
+    <div>Tales you can hold · @katha.by.vyom</div>
+  </div>
+</footer>
+
+</body>
+</html>
