@@ -282,12 +282,134 @@ h3.h-display { font-size: clamp(22px, 2vw, 28px); line-height: 1.15; }
   color: var(--fg3); font-variant-numeric: tabular-nums; opacity: 0.7;
 }
 
+/* ============================================================
+   MOBILE — Cast turnaround
+   ------------------------------------------------------------
+   The previous block referenced classes (.cast-nameplate,
+   .np-name, .cast-captions) that don't exist in this build, so
+   the dossier panel never actually relocated on phones — it
+   stayed pinned to the right at vertical-centre and grew wider,
+   overlapping the puppet. Fix: pin the panel to the BOTTOM,
+   compress it heavily, hide the long caption list (the model
+   is the star on mobile), and translucent-paper the background
+   so the puppet still reads through.
+   ============================================================ */
 @media (max-width: 720px) {
-  .cast-title, .cast-nameplate { right: 0; left: 0; max-width: none; text-align: center; padding: 0 var(--sp-4); }
-  .cast-nameplate { top: auto; bottom: clamp(120px, 22vh, 200px); }
-  .np-name { left: 0; right: 0; text-align: center; }
-  .cast-captions { left: 0; right: 0; bottom: clamp(72px, 14vh, 110px); text-align: center; max-width: none; padding: 0 var(--sp-4); }
-  .cap { left: 0; right: 0; }
+  /* Title block — keep only eyebrow + tiny h2 up top */
+  .cast-title {
+    top: clamp(70px, 10vh, 88px);
+    left: 0; right: 0;
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 18px);
+    text-align: center;
+  }
+  .cast-title h2 { font-size: 20px; margin: 6px 0 4px; }
+  .cast-hint { font-size: 10px; letter-spacing: 0.16em; }
+
+  /* The panel: bottom-pinned strip, full width with gutters */
+  .cast-panel {
+    top: auto;
+    right: 0; left: 0;
+    bottom: clamp(58px, 11vh, 86px);
+    transform: none;
+    width: auto;
+    margin: 0 clamp(12px, 3vw, 18px);
+    pointer-events: auto;
+  }
+
+  /* Dossier — compact, frosted khadi paper so the model peeks through */
+  .dossier {
+    padding: 12px 14px 12px;
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-hard-sm);
+  }
+  .dossier-eyebrow { font-size: 10px; letter-spacing: 0.16em; }
+  .dossier-name    { font-size: 22px; line-height: 1.05; margin: 4px 0 2px; }
+  .dossier-sub     { font-size: 10px; letter-spacing: 0.12em; }
+
+  /* Caption list is the height-killer on mobile. Hide all caps,
+     show only the active one — it becomes a rotating subtitle
+     that changes as you scroll through the character. */
+  .dossier-caps {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    min-height: 2.6em;
+    position: relative;
+  }
+  .cap {
+    display: none;
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+  .cap.active {
+    display: flex;
+    opacity: 1;
+    color: var(--ink);
+  }
+  .cap.active::before {
+    margin-top: 0.45em;
+  }
+
+  /* Stat chips: row, smaller */
+  .dossier-tags { gap: 5px; margin-top: 8px; }
+  .dossier-tags .tag {
+    font-size: 10px;
+    padding: 2px 9px;
+    border-width: 1px;
+  }
+
+  /* CTA: smaller padding, font */
+  .dossier-cta { margin-top: 10px; }
+  .dossier-cta .btn {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+
+  /* Progress dots — tuck under the title up top */
+  .cast-progress {
+    bottom: auto;
+    top: clamp(46px, 8vh, 62px);
+  }
+
+  /* Angle readout is desktop fluff — hide it on a phone */
+  .cast-angle { display: none; }
+}
+
+/* ============================================================
+   MOBILE — Header (the nav-label wrap-each-word bug)
+   ------------------------------------------------------------
+   On a 380-ish viewport the four nav labels were wrapping at
+   their internal space ("The cast" → "The" / "cast"). They
+   couldn't fit beside brand + CTA + cart anyway. So on phones
+   we hide the nav links entirely and keep only the brand + CTA
+   + cart icon. The CTA also doubles as a section jump.
+   ============================================================ */
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .brand { white-space: nowrap; }
+  .brand .symbol { width: 26px; height: 26px; }
+  .brand span { font-size: 17px; }
+  .header-actions .btn {
+    padding: 7px 12px !important;
+    font-size: 13px !important;
+  }
+  .header-inner { gap: 10px; }
+}
+
+/* ============================================================
+   MOBILE — Hero polish (sub-480px tighten)
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-title { font-size: 32px; line-height: 1.05; }
+  .hero-lead  { font-size: 15px; }
+  .hero-actions .btn { padding: 10px 14px; font-size: 14px; }
+  .hero-trust { gap: 12px; font-size: 11px; }
+  .hero-tag { font-size: 10px; padding: 6px 10px; }
+  .hero-stage { max-width: 100%; }
 }
 
 /* ---------- Kits grid ---------- */
