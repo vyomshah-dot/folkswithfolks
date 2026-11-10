@@ -53,8 +53,13 @@ finished arm about 10 → 8 mm thick, leg 13 → 10 mm, head 30 mm around a 24 m
 
 ## To check on the first prototype
 
-- Foot-loop opening on the armature against the 5.2 mm peg holes.
+- A 4 mm peg through the 5 mm foot loop (stage holes are 4.2 mm): check it slides in without forcing and the puppet stays upright. Clay around the loop will reduce the opening.
 - Whether the two head halves close cleanly around the foil ball.
 - Stencil pop-out: plasticine may need a light dusting of talc or a flexible frame.
 - Slot tightness on the phone stand, and whether the 80° notch is stable with a tall phone.
 - Box sizes and closures with a packaging vendor; corner tabs can be tucked or glued.
+
+## Measured on the real armature
+
+- Height 19 cm, width 6 cm.
+- Foot-loop opening: 5 mm. Hands and feet are the loops (not string grips).

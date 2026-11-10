@@ -244,10 +244,10 @@ def tray_stage():
             b.append(line(xx, yy + s * 1.5, xx, yy + s * (BD - 1.5)))
     b += [line(x0, y0, x0 + BL, y0), line(x0, y0 + BW, x0 + BL, y0 + BW),
           line(x0, y0, x0, y0 + BW), line(x0 + BL, y0, x0 + BL, y0 + BW)]
-    # peg holes: 5.2 mm on a 20 mm grid; the tray flipped over is the stage floor
+    # peg holes: 4.2 mm on a 20 mm grid for 4 mm pegs (foot loops open 5 mm); the tray flipped over is the stage floor
     for i in range(9):
         for j in range(5):
-            b.append(circle(x0 + 45 + 20 * i, y0 + 55 + 20 * j, 5.2))
+            b.append(circle(x0 + 45 + 20 * i, y0 + 55 + 20 * j, 4.2))
     # slits for the backdrop tabs, 12 mm in from the rear edge
     for xs in (40, 170):
         b.append(rect(x0 + xs, y0 + 12, 40.6, 1.8))
