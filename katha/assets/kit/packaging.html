@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Katha 01 — Packaging Artwork</title>
+<link rel="stylesheet" href="../../../brand-core/tokens.css">
+<style>
+/* A4 landscape guide. Face artwork is drawn at true proportions (1 SVG unit = 1 mm), scaled to fit the page. */
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #d9d1c3; font-family: var(--font-body); color: var(--ink); }
+.sheet { width: 297mm; height: 210mm; margin: 6mm auto; background: var(--paper); padding: 12mm 14mm;
+  display: grid; grid-template-rows: auto 1fr; gap: 6mm; page-break-after: always; break-after: page; overflow: hidden; }
+@media print { html, body { background: none; } .sheet { margin: 0; } }
+.hd { display: flex; justify-content: space-between; align-items: baseline; border-bottom: .6mm solid var(--ink); padding-bottom: 3mm; }
+.hd h1 { font-family: var(--font-display); font-weight: 800; font-size: 22pt; margin: 0; }
+.hd span { font-size: 8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(42,36,31,.65); }
+.body { display: grid; grid-template-columns: 1.35fr 1fr; gap: 10mm; min-height: 0; }
+.art { display: grid; place-items: center; min-height: 0; }
+.art svg { max-width: 100%; max-height: 160mm; filter: drop-shadow(1.4mm 1.4mm 0 var(--ink)); }
+.notes { font-size: 9.5pt; line-height: 1.45; display: grid; align-content: start; gap: 3mm; }
+.notes h2 { font-family: var(--font-display); font-weight: 800; font-size: 12pt; margin: 2mm 0 0; }
+.notes p, .notes ul { margin: 0; } .notes ul { padding-left: 4.5mm; }
+table { border-collapse: collapse; width: 100%; font-size: 8.5pt; }
+td, th { border-bottom: .3mm solid rgba(42,36,31,.25); padding: 1.6mm 2mm; text-align: left; vertical-align: top; }
+th { font-weight: 700; }
+.sw { display: inline-block; width: 4mm; height: 4mm; border: .3mm solid var(--ink); border-radius: 1mm; vertical-align: -0.8mm; margin-right: 1.5mm; }
+.flag { background: var(--marigold-soft, #F0C079); padding: 2mm 3mm; border-radius: 2mm; font-size: 8.5pt; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; }
+.three figure { margin: 0; display: grid; gap: 3mm; }
+.three figcaption { font-size: 9pt; line-height: 1.4; }
+.three figcaption b { font-family: var(--font-display); font-size: 11pt; display: block; }
+</style>
+</head>
+<body>
+
+<!-- 1 · SYSTEM -->
+<section class="sheet">
+  <div class="hd"><h1>One box, three lives</h1><span>Katha 01 · packaging system</span></div>
+  <div class="three">
+    <figure>
+      <svg viewBox="0 0 120 90" aria-label="Tray flipped into stage">
+        <path d="M14 66 L106 66 L116 84 L4 84 Z" fill="#EADDC6" stroke="#2A241F" stroke-width="1.5"/>
+        <path d="M22 66 L22 10 L98 10 L98 66" fill="#2E3A59" stroke="#2A241F" stroke-width="1.5"/>
+        <path d="M32 66 L32 40 L40 40 L40 30 L48 30 L48 22 L72 22 L72 30 L80 30 L80 40 L88 40 L88 66" fill="none" stroke="#E8A33D" stroke-width="1.5"/>
+        <g fill="#2A241F"><circle cx="40" cy="74" r="1"/><circle cx="55" cy="74" r="1"/><circle cx="70" cy="74" r="1"/><circle cx="85" cy="74" r="1"/></g>
+      </svg>
+      <figcaption><b>1 · Tray → Stage</b>Flip the tray. The peg floor and torana backdrop are printed for the shoot. Stays as the set.</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 120 90" aria-label="Insert punched into phone stand">
+        <rect x="8" y="10" width="50" height="70" rx="2" fill="#B9AE9C" stroke="#2A241F" stroke-width="1.5"/>
+        <path d="M14 70 L14 60 L26 60 L40 20 L46 20 L52 70 Z" fill="none" stroke="#2A241F" stroke-width="1" stroke-dasharray="2 1.5"/>
+        <path d="M66 45 L76 45 M72 41 L76 45 L72 49" stroke="#C24E3A" stroke-width="2" fill="none"/>
+        <path d="M84 84 L84 72 L88 72 L98 34 L102 34 L110 84 Z" fill="#B9AE9C" stroke="#2A241F" stroke-width="1.5"/>
+        <rect x="90" y="18" width="14" height="40" rx="2" transform="rotate(14 97 38)" fill="#2A241F"/>
+      </svg>
+      <figcaption><b>2 · Insert → Phone stand</b>The card that holds the parts is the jigsaw stand. Punch out, slot, pick a notch: 80°, 70°, 60°, 50°.</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 120 90" aria-label="Sleeve stood on end as display box">
+        <rect x="38" y="6" width="44" height="80" rx="2" fill="#2E3A59" stroke="#2A241F" stroke-width="1.5"/>
+        <rect x="44" y="12" width="32" height="62" rx="4" fill="#F4ECDD" stroke="#E8A33D" stroke-width="1.2"/>
+        <path d="M60 34 L60 64" stroke="#2A241F" stroke-width="2"/><circle cx="60" cy="28" r="5" fill="#E8C9A0" stroke="#2A241F"/>
+        <path d="M54 40 L66 40 L67 54 L53 54 Z" fill="#B07A4F"/>
+      </svg>
+      <figcaption><b>3 · Sleeve → Display box</b>Stand the sleeve on end, slide in the clear window. The finished puppet lives on the shelf.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2 · SLEEVE FRONT -->
+<section class="sheet">
+  <div class="hd"><h1>Sleeve · front</h1><span>175 × 256 mm face · window 140 × 215</span></div>
+  <div class="body">
+    <div class="art"><svg viewBox="0 0 175 256" width="175mm" aria-label="Sleeve front artwork">
+      <rect width="175" height="256" fill="#2E3A59"/>
+      <g opacity=".22" fill="#F4ECDD"><circle cx="10" cy="10" r=".9"/><circle cx="20" cy="10" r=".9"/><circle cx="165" cy="246" r=".9"/></g>
+      <rect x="17.5" y="18" width="140" height="215" rx="6" fill="#F4ECDD" stroke="#E8A33D" stroke-width="1.6"/>
+      <text x="87.5" y="120" font-family="Hanken Grotesk, sans-serif" font-size="5" fill="#2A241F" text-anchor="middle" opacity=".55">WINDOW · puppet and clay visible</text>
+      <path d="M26 233 L26 120 L38 120 L38 98 L52 98 L52 78 L66 78 L66 62 L109 62 L109 78 L123 78 L123 98 L137 98 L137 120 L149 120 L149 233" fill="none" stroke="#C24E3A" stroke-width="1.2"/>
+      <text x="87.5" y="11" font-family="Hanken Grotesk, sans-serif" font-size="4.2" font-weight="600" letter-spacing="1.2" fill="#F4ECDD" opacity=".8" text-anchor="middle">KATHA 01 · A FOLK WITH FOLKS KIT</text>
+      <text x="14" y="246" font-family="Fraunces, serif" font-style="italic" font-weight="650" font-size="12" fill="#F4ECDD">Chanakya's Kit of <tspan fill="#E8A33D">Wit</tspan></text>
+      <rect x="146" y="238" width="17" height="11" rx="2" fill="none" stroke="#F4ECDD" stroke-width=".8"/>
+      <text x="154.5" y="246" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="7" fill="#F4ECDD" text-anchor="middle">7+</text>
+    </svg></div>
+    <div class="notes">
+      <h2>Rules</h2>
+      <ul>
+        <li>Indigo sleeve. The window is the hero: the real armature and clay are the picture.</li>
+        <li>Katha logotype in Fraunces italic, paper colour; "Wit" in marigold.</li>
+        <li>Endorsement "a folk with folks kit" in Hanken 600, tracked caps, top edge.</li>
+        <li>One torana arch, terracotta line, framing the window. No other motifs on the front.</li>
+        <li>Age 7+ in a ruled box, bottom right. Same corner on every Katha kit.</li>
+      </ul>
+      <h2>Finish</h2>
+      <ul><li>Matte, uncoated feel. Optional blind emboss on the torana line.</li><li>Window: die-cut; 155 × 230 mm clear acrylic or PET behind it, which becomes the display front.</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · SLEEVE BACK + SIDES -->
+<section class="sheet">
+  <div class="hd"><h1>Sleeve · back and sides</h1><span>back 175 × 256 · sides 48.5 × 256</span></div>
+  <div class="body">
+    <div class="art"><svg viewBox="0 0 280 256" width="280mm" aria-label="Sleeve back and side panel artwork">
+      <rect x="0" y="0" width="175" height="256" fill="#F4ECDD"/>
+      <text x="12" y="24" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="12" fill="#2A241F">Build him. Shoot him.</text>
+      <text x="12" y="38" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="12" fill="#C24E3A">Keep him.</text>
+      <text x="12" y="52" font-family="Fraunces, serif" font-style="italic" font-size="5.6" fill="#2A241F">Chanakya outwitted kings.</text><text x="12" y="59" font-family="Fraunces, serif" font-style="italic" font-size="5.6" fill="#2A241F">You are about to out-wit a cardboard box.</text>
+      <g font-family="Hanken Grotesk, sans-serif" font-size="5.2" fill="#2A241F">
+        <text x="12" y="70" font-weight="700">IN THE BOX</text>
+        <text x="12" y="79">Wire skeleton · 3 clays · 3 press stencils · scraper</text>
+        <text x="12" y="87">Foil · shawl · 2 pegs · 8 shot cards · backdrop</text>
+        <text x="12" y="95">Punch-out phone stand · display window · manual</text>
+      </g>
+      <g transform="translate(12 108)">
+        <rect width="46" height="40" rx="3" fill="#EADDC6"/><rect x="51" width="46" height="40" rx="3" fill="#EADDC6"/><rect x="102" width="46" height="40" rx="3" fill="#EADDC6"/>
+        <g font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="6" fill="#2A241F"><text x="4" y="34">1 Build</text><text x="55" y="34">2 Shoot</text><text x="106" y="34">3 Keep</text></g>
+        <text x="74" y="56" font-family="Hanken Grotesk, sans-serif" font-size="4.2" fill="#2A241F" opacity=".7" text-anchor="middle">photo row: hands building · phone on stand · puppet in window</text>
+      </g>
+      <g font-family="Hanken Grotesk, sans-serif" font-size="4.4" fill="#2A241F">
+        <text x="12" y="190" font-weight="700">⚠ WARNING: Small parts. Not for children under 3 years.</text>
+        <text x="12" y="198">Wire ends are capped; keep caps on. Adult help to punch out the stand.</text>
+        <text x="12" y="214">Folk with Folks · Mumbai, India · folkwithfolks.in</text>
+        <text x="12" y="221">Instagram + YouTube: Folk with Folks</text>
+      </g>
+      <rect x="120" y="200" width="42" height="26" fill="#fff" stroke="#2A241F" stroke-width=".5"/>
+      <text x="141" y="216" font-family="Hanken Grotesk, sans-serif" font-size="4" fill="#2A241F" text-anchor="middle">barcode / MRP</text>
+      <rect x="12" y="230" width="22" height="22" fill="#fff" stroke="#2A241F" stroke-width=".5" stroke-dasharray="1.5 1"/>
+      <text x="23" y="243" font-family="Hanken Grotesk, sans-serif" font-size="3.6" fill="#2A241F" text-anchor="middle">QR</text>
+      <g transform="translate(190 0)">
+        <rect width="48.5" height="256" fill="#C24E3A"/>
+        <text transform="translate(30 128) rotate(-90)" font-family="Fraunces, serif" font-style="italic" font-weight="650" font-size="14" fill="#F4ECDD" text-anchor="middle">Chanakya's Kit of Wit</text>
+        <text transform="translate(40 128) rotate(-90)" font-family="Hanken Grotesk, sans-serif" font-weight="600" font-size="4.2" letter-spacing="1" fill="#F4ECDD" text-anchor="middle">KATHA 01 · A FOLK WITH FOLKS KIT</text>
+        <circle cx="24.25" cy="22" r="9" fill="#E8A33D" stroke="#2A241F" stroke-width=".8"/>
+        <text x="24.25" y="244" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="8" fill="#F4ECDD" text-anchor="middle">01</text>
+      </g>
+    </svg></div>
+    <div class="notes">
+      <h2>Back</h2>
+      <ul><li>Paper ground. Headline in Bricolage 800, two lines, the second in terracotta.</li><li>The 1 · 2 · 3 photo row tells the "three lives" story without words.</li><li>Legal block bottom-left. The ⚠ glyph is the only symbol allowed.</li></ul>
+      <h2>Spine (shelf face)</h2>
+      <ul><li>Terracotta for Chanakya, marigold for Tenali, neem for Birbal. A shelf of kits reads as a colour row.</li><li>Kit number at the bottom, character sun badge at the top.</li></ul>
+      <p class="flag">Before print: check legal text with the printer (MRP, manufacturer address, toy-safety marking for India such as BIS / IS 9873 where it applies).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · INSIDE PRINTS -->
+<section class="sheet">
+  <div class="hd"><h1>Inside prints</h1><span>tray floor · tray inside · insert</span></div>
+  <div class="body">
+    <div class="art"><svg viewBox="0 0 260 175" width="260mm" aria-label="Tray inside work-mat print and stage floor">
+      <rect x="0" y="0" width="250" height="170" fill="#F4ECDD" stroke="#2A241F" stroke-width=".6"/>
+      <g stroke="#2A241F" stroke-width=".3" opacity=".25">
+        <path d="M0 10 H250 M0 20 H250 M0 30 H250 M0 40 H250 M0 50 H250 M0 60 H250 M0 70 H250 M0 80 H250 M0 90 H250 M0 100 H250 M0 110 H250 M0 120 H250 M0 130 H250 M0 140 H250 M0 150 H250 M0 160 H250"/>
+      </g>
+      <text x="10" y="16" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="8" fill="#2A241F">Work mat · 10 mm grid</text>
+      <g transform="translate(150 30)" fill="none" stroke="#2A241F" stroke-width="1.2">
+        <path d="M40 0 L40 100 M14 28 L66 28 M14 28 L8 92 M66 28 L72 92 M28 96 L24 140 M52 96 L56 140"/>
+      </g>
+      <text x="150" y="20" font-family="Hanken Grotesk, sans-serif" font-size="5" fill="#2A241F">Lay the skeleton here: 1:1 outline, 190 mm</text>
+      <g font-family="Hanken Grotesk, sans-serif" font-size="5" fill="#2A241F">
+        <rect x="10" y="30" width="22" height="22" rx="2" fill="#E8C9A0"/><text x="36" y="44">beige · skin, hands, dhoti</text>
+        <rect x="10" y="58" width="22" height="22" rx="2" fill="#B07A4F"/><text x="36" y="72">brown · torso</text>
+        <rect x="10" y="86" width="22" height="22" rx="2" fill="#2A241F"/><text x="36" y="100">black · hair, brows, feet</text>
+      </g>
+      <text x="10" y="132" font-family="Fraunces, serif" font-style="italic" font-size="7" fill="#C24E3A">Snip here. Yes, right there.</text>
+    </svg></div>
+    <div class="notes">
+      <h2>Tray inside = work mat</h2>
+      <p>Replaces the separate work mat. Grid, colour key, and a 1:1 skeleton outline so kids can check proportions.</p>
+      <h2>Tray outside = stage floor</h2>
+      <p>Plain paper deep with the 45 peg holes (4.2 mm) and a faint floorboard line. Nothing busy behind the puppet.</p>
+      <h2>Insert</h2>
+      <p>Unprinted 3 mm greyboard; piece letters laser-etched. Raw board reads as "workshop", and keeps cost down.</p>
+      <h2>Backdrop</h2>
+      <p>Indigo with one marigold stepped torana. Folds at 85 mm to store.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · SPEC -->
+<section class="sheet">
+  <div class="hd"><h1>Print and material spec</h1><span>for vendor quotes</span></div>
+  <div class="body" style="grid-template-columns:1fr 1fr">
+    <div class="notes">
+      <h2>Colour</h2>
+      <table>
+        <tr><th>Token</th><th>Hex</th><th>Use on the box</th></tr>
+        <tr><td><span class="sw" style="background:#2E3A59"></span>Indigo</td><td>#2E3A59</td><td>Sleeve, backdrop</td></tr>
+        <tr><td><span class="sw" style="background:#F4ECDD"></span>Paper</td><td>#F4ECDD</td><td>Back, window frame, type on indigo</td></tr>
+        <tr><td><span class="sw" style="background:#C24E3A"></span>Terracotta</td><td>#C24E3A</td><td>Chanakya spine, torana line</td></tr>
+        <tr><td><span class="sw" style="background:#E8A33D"></span>Marigold</td><td>#E8A33D</td><td>"Wit", badge, backdrop arch</td></tr>
+        <tr><td><span class="sw" style="background:#2A241F"></span>Ink</td><td>#2A241F</td><td>Text, line art</td></tr>
+      </table>
+      <p class="flag">CMYK values are not set yet. Ask the printer for a proof on the real board (FOGRA39 for coated, uncoated profile for kraft-feel stock) and log the values in brand-core/tokens.css.</p>
+      <h2>Type</h2>
+      <ul><li>Fraunces italic 600–700: Katha logotype and story lines only.</li><li>Bricolage Grotesque 800: headlines, numbers.</li><li>Hanken Grotesk 400–700: everything else. Minimum 6 pt on the box.</li></ul>
+    </div>
+    <div class="notes">
+      <h2>Materials</h2>
+      <table>
+        <tr><th>Part</th><th>Material</th></tr>
+        <tr><td>Sleeve</td><td>1.5 mm board wrapped in 157 gsm matte art paper, or 400 gsm FBB for prototype</td></tr>
+        <tr><td>Tray</td><td>1.5 mm board, printed both sides</td></tr>
+        <tr><td>Insert / stand</td><td>3 mm greyboard, laser cut + etched</td></tr>
+        <tr><td>Backdrop</td><td>300–350 gsm card</td></tr>
+        <tr><td>Window</td><td>0.5–1 mm clear PET or acrylic, 155 × 230</td></tr>
+        <tr><td>Stencils</td><td>3 mm acrylic or PP, laser cut; base plate with 1 mm ridges</td></tr>
+        <tr><td>Manual</td><td>A6, 12 pp, 130 gsm matte, saddle stitched</td></tr>
+        <tr><td>Clay</td><td>Oil-based plasticine, non-toxic, 3 colours</td></tr>
+        <tr><td>Armature</td><td>About 2 mm aluminium wire, pre-twisted, capped ends</td></tr>
+      </table>
+      <p>Cut files for every part are in <b>katha/assets/kit/</b>. Prototype first; none of this has been cut yet.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
