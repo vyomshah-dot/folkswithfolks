@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="246mm" height="166mm" viewBox="0 0 246 166">
+<rect x="0" y="0" width="246" height="166" rx="2" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="240" y="162" font-family="Arial, sans-serif" font-size="3" text-anchor="end" fill="#000">KATHA 01 · INSERT · PHONE STAND · 3 mm greyboard</text>
+<path d="M8,160 L8,142 L14,142 L14,148 L27,148 L27,142 L39,142 L39,148 L52,148 L52,142 L59,142 L59,148 L72,148 L72,142 L77,142 L77,148 L90,148 L98,142 L103.5,75 L107,75 L107,87 L110,87 L110,75 L120,75 L148,160 L131,160 L131,145 L128,145 L128,160 L33,160 L33,151 L30,151 L30,160 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<path d="M150,8 L150,26 L144,26 L144,20 L131,20 L131,26 L119,26 L119,20 L106,20 L106,26 L99,26 L99,20 L86,20 L86,26 L81,26 L81,20 L68,20 L60,26 L54.5,93 L51,93 L51,81 L48,81 L48,93 L38,93 L10,8 L27,8 L27,23 L30,23 L30,8 L125,8 L125,17 L128,17 L128,8 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="83.5" y="156.5" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">80°</text>
+<text x="74.5" y="14" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">80°</text>
+<text x="65.5" y="156.5" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">70°</text>
+<text x="92.5" y="14" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">70°</text>
+<text x="45.5" y="156.5" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">60°</text>
+<text x="112.5" y="14" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">60°</text>
+<text x="20.5" y="156.5" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">50°</text>
+<text x="137.5" y="14" font-family="Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#000">50°</text>
+<text x="120" y="130" font-family="Arial, sans-serif" font-size="5" text-anchor="middle" fill="#000">A</text>
+<text x="38" y="42" font-family="Arial, sans-serif" font-size="5" text-anchor="middle" fill="#000">B</text>
+<path d="M166,8 L236,8 L236,42 L226,42 L226,30 L223,30 L223,42 L179,42 L179,30 L176,30 L176,42 L166,42 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="201" y="25" font-family="Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#000">TOP BAR</text>
+<path d="M166,52 L176,52 L176,67 L179,67 L179,52 L223,52 L223,67 L226,67 L226,52 L236,52 L236,82 L166,82 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="201" y="71" font-family="Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#000">REAR</text>
+<path d="M166,92 L176,92 L176,101 L179,101 L179,92 L223,92 L223,101 L226,101 L226,92 L236,92 L236,110 L166,110 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="201" y="105" font-family="Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#000">FRONT</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="120mm" viewBox="0 0 180 120">
+<rect x="0" y="0" width="180" height="120" rx="4" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="174" y="115" font-family="Arial, sans-serif" font-size="3.2" text-anchor="end" fill="#000">KATHA 01 · STENCIL 3 · CHANAKYA</text>
+<path d="M19.36,10.93 Q20,8 23,8 L83,8 Q86,8 86.64,10.93 L97.36,60.07 Q98,63 95,63 L11,63 Q8,63 8.64,60.07 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<path d="M31,14 L23,58" fill="none" stroke="#0050d0" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M42,14 L38,58" fill="none" stroke="#0050d0" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M53,14 L53,58" fill="none" stroke="#0050d0" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M64,14 L68,58" fill="none" stroke="#0050d0" stroke-width="0.6" stroke-linecap="round"/>
+<path d="M75,14 L83,58" fill="none" stroke="#0050d0" stroke-width="0.6" stroke-linecap="round"/>
+<text x="53" y="68.5" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#000">8 dhoti (lines = pleats)</text>
+<rect x="8" y="76" width="100" height="3" rx="1.5" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="58" y="84.5" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#000">9 sacred thread</text>
+<path d="M121.26,11.86 Q122,10 122.74,11.86 L125.26,18.14 Q126,20 126.39,21.96 L126.61,23.04 Q127,25 126.37,26.9 L126.13,27.6 Q125.5,29.5 123.75,30.25 L123.75,30.25 Q122,31 120.25,30.25 L120.25,30.25 Q118.5,29.5 117.87,27.6 L117.63,26.9 Q117,25 117.39,23.04 L117.61,21.96 Q118,20 118.74,18.14 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="122" y="37" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#000">10 shikha</text>
+<rect x="140" y="14" width="10" height="3" rx="1.4" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<rect x="154" y="14" width="10" height="3" rx="1.4" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="152" y="23" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#000">11 brows</text>
+<path d="M143.85,34.53 Q143,34 143.85,33.47 L146.15,32.03 Q147,31.5 147.96,31.79 L151.04,32.71 Q152,33 152.96,32.71 L156.04,31.79 Q157,31.5 157.85,32.03 L160.15,33.47 Q161,34 160.15,34.53 L157.85,35.97 Q157,36.5 156.02,36.3 L152.98,35.7 Q152,35.5 151.02,35.7 L147.98,36.3 Q147,36.5 146.15,35.97 Z" fill="none" stroke="#e00000" stroke-width="0.2"/>
+<text x="152" y="42.5" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#000">12 moustache</text>
+</svg>
